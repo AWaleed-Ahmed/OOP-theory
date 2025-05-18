@@ -15,7 +15,7 @@
             <Image url="@../images/abstractDarkGreenBackground.jpeg" />
          </image>
       </ImageView>
-      <Button layoutX="864.0" layoutY="479.0" mnemonicParsing="false" onAction="#switchToScene4" prefHeight="43.0" prefWidth="98.0" text="Done">
+      <Button fx:id="doneButton" layoutX="864.0" layoutY="479.0" mnemonicParsing="false" onAction="#switchToScene8" prefHeight="43.0" prefWidth="98.0" text="Done">
          <font>
             <Font name="Cooper Black" size="14.0" />
          </font>

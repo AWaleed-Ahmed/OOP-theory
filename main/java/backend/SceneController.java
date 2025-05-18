@@ -1,8 +1,6 @@
 package backend;
 
-import backend.models.Authenticator;
-import backend.models.BMI_Calculation_Tips;
-import backend.models.CalorieCalculator;
+import backend.models.*;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -77,14 +75,14 @@ public class SceneController {
             System.out.println("Password must be numeric.");
         }
     }
-
+    public double bmi2;
     public void switchToScene4(ActionEvent event) throws IOException {
         try {
             int age = Integer.parseInt(ageField.getText());
             this.weight = Double.parseDouble(weightField.getText());
             this.height = Double.parseDouble(heightField.getText());
 
-            backend.models.UserData userData = new backend.models.UserData();
+            UserData userData = new UserData();
             userData.setAge(age);
             userData.setGender(gender);
             userData.setWeigth(weight);
@@ -113,7 +111,7 @@ public class SceneController {
             stage.show();
 
             this.bmi = bmi;
-            switchToScene10(event);
+            bmi2 = bmi;
 
         } catch (NumberFormatException e) {
             System.out.println("Please enter valid numeric values.");
@@ -137,10 +135,10 @@ public class SceneController {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setScene(new Scene(root));
         stage.show();
+        switchToScene8(event);
     }
 
     public void switchToScene8(ActionEvent event) throws IOException { switchScene(event, "/frontend/RankCalculator.fxml"); }
-    public void switchToScene9(ActionEvent event) throws IOException { switchScene(event, "/frontend/Rank+Suggestions.fxml"); }
     public void switchToScene10(ActionEvent event) throws IOException { switchScene(event, "/frontend/FitnessGoals.fxml"); }
 
     public void switchScene(ActionEvent event, String fxmlFile) {
@@ -207,6 +205,10 @@ public class SceneController {
         int grams = Integer.parseInt(text);
         return (int) CalorieCalculator.getCaloriesFromMap(foodKey, grams);
     }
+    public void setBmi(double bmi) {
+        this.bmi = bmi;
+    }
+
 
     @FXML
     public void handleAddFoodItem(ActionEvent event) {
@@ -246,7 +248,9 @@ public class SceneController {
             calorieField.clear();
             quantityField.clear();
 
-            tips.setText("Item added successfully!");
+            String existingTips = tips.getText();
+            tips.setText(existingTips + "\n\n✅ Item added successfully!");
+
 
         } catch (NumberFormatException e) {
             tips.setText("Please enter valid numeric values for calories and quantity.");
@@ -263,13 +267,15 @@ public class SceneController {
         totalCaloriesResultLabel.setText("Total Calories: " + String.format("%.0f", total));
 
         BMI_Calculation_Tips bmiTips = new BMI_Calculation_Tips();
-        bmiTips.bmical(this.weight, this.height);
-        this.bmi = bmiTips.index();
+        String goalAdvice = "";
+        if (bmi2 == 0.0) {
+            goalAdvice = "BMI not calculated yet.";
+        } else {
+            goalAdvice = calorieCalculator.suggestPlanBasedOnBMIAndGoal(bmi2);
+            tips.setText(goalAdvice);
+        }
 
-        String bmiAdvice = bmiTips.getTips();
-        String goalAdvice = calorieCalculator.suggestPlanBasedOnBMIAndGoal(this.bmi);
-
-        tips.setText(bmiAdvice + "\n\n" + goalAdvice);
+        tips.setText(goalAdvice);
     }
 
     public void receiveCaloriesFromScene1(double calories) {
@@ -286,21 +292,63 @@ public class SceneController {
             bmiTips.bmical(this.weight, this.height);
             this.bmi = bmiTips.index();
 
-            String tipsText = bmiTips.getTips();
+
             String plan = calorieCalculator.suggestPlanBasedOnBMIAndGoal(this.bmi);
 
             if (tips != null) {
-                tips.setText(tipsText + "\n\n" + plan);
+                tips.setText(plan);
             }
         }
     }
 
-    public void setBmi(double bmi) {
-        this.bmi = bmi;
-    }
 
     public void setWeightAndHeight(double weight, double height) {
         this.weight = weight;
         this.height = height;
     }
+    private Stage stage;
+    private Scene scene;
+    @FXML private TextField pushupsField, pullupsField, squatsField, burpeesField, lungesField, situpsField;
+    @FXML private Label rankLabel, suggestionLabel;
+
+    @FXML
+    public void switchToScene9(ActionEvent event) throws IOException {
+        int pushups = parseInput(pushupsField.getText());
+        int pullups = parseInput(pullupsField.getText());
+        int squats = parseInput(squatsField.getText());
+        int burpees = parseInput(burpeesField.getText());
+        int lunges = parseInput(lungesField.getText());
+        int situps = parseInput(situpsField.getText());
+
+        int totalReps = pushups + pullups + squats + burpees + lunges + situps;
+
+        String rank = WorkoutPlan.getRank(totalReps);
+        String suggestion = WorkoutPlan.getSuggestion(rank);
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/frontend/Rank+Suggestions.fxml"));
+        Parent root = loader.load();
+
+        SceneController controller = loader.getController();
+        controller.setRankAndSuggestion(rank, suggestion);
+
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+
+    }
+
+    private int parseInput(String text) {
+        try {
+            return Integer.parseInt(text.trim());
+        } catch (NumberFormatException e) {
+            return 0;
+        }
+    }
+
+    public void setRankAndSuggestion(String rank, String suggestion) {
+        if (rankLabel != null) rankLabel.setText("Rank: " + rank);
+        if (suggestionLabel != null) suggestionLabel.setText(suggestion);
+    }
 }
+

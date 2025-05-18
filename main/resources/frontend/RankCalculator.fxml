@@ -8,83 +8,120 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="996.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="backend.SceneController">
+<AnchorPane prefHeight="560.0" prefWidth="996.0"
+            xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="backend.SceneController">
     <children>
-        <ImageView fitHeight="1005.0" fitWidth="572.0" layoutX="215.0" layoutY="-223.0" opacity="0.87" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+
+        <!-- Backgrounds -->
+        <ImageView fitHeight="1005.0" fitWidth="572.0" layoutX="215.0" layoutY="-223.0" rotate="90.0" opacity="0.87">
             <image>
                 <Image url="@../images/abstractDarkGreenBackground.jpeg" />
             </image>
         </ImageView>
-        <Button layoutX="796.0" layoutY="490.0" mnemonicParsing="false" onAction="#switchToScene9" prefHeight="43.0" prefWidth="98.0" text="Done">
-            <font>
-                <Font name="Cooper Black" size="14.0" />
-            </font>
-        </Button>
-        <ImageView fitHeight="595.0" fitWidth="396.0" layoutX="324.0" layoutY="-18.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+        <ImageView fitHeight="595.0" fitWidth="396.0" layoutX="324.0" layoutY="-18.0" rotate="90.0">
             <image>
                 <Image url="@../images/whiteBackground.jpg" />
             </image>
         </ImageView>
-        <TextField layoutX="456.0" layoutY="92.0" prefHeight="43.0" prefWidth="240.0" promptText="e.g 25" style="-fx-border-color: black; -fx-background-color: white;">
-         <font>
-            <Font name="Century Gothic Bold" size="16.0" />
-         </font></TextField>
-        <TextField layoutX="456.0" layoutY="221.0" prefHeight="43.0" prefWidth="240.0" style="-fx-border-color: black; -fx-background-color: white;">
-         <font>
-            <Font name="Century Gothic Bold" size="16.0" />
-         </font></TextField>
-        <TextField layoutX="456.0" layoutY="158.0" prefHeight="43.0" prefWidth="240.0" style="-fx-border-color: black; -fx-background-color: white;">
-         <font>
-            <Font name="Century Gothic Bold" size="16.0" />
-         </font></TextField>
-        <Label layoutX="273.0" layoutY="96.0" prefHeight="35.0" prefWidth="139.0" text="Push-ups" textAlignment="JUSTIFY">
+
+        <!-- Title -->
+        <Label layoutX="227.0" layoutY="30.0" prefHeight="42.0" prefWidth="270.0"
+               style="-fx-border-color: white; -fx-border-radius: 10; -fx-border-width: 3;" text="Enter your reps:"
+               textFill="WHITE">
             <font>
                 <Font name="Cooper Black" size="30.0" />
             </font>
         </Label>
-        <Label layoutX="273.0" layoutY="225.0" prefHeight="35.0" prefWidth="139.0" text="Squats" textAlignment="JUSTIFY">
+
+        <!-- Push-ups -->
+        <Label layoutX="273.0" layoutY="96.0" prefHeight="35.0" prefWidth="139.0" text="Push-ups">
             <font>
                 <Font name="Cooper Black" size="30.0" />
             </font>
         </Label>
-        <Label layoutX="273.0" layoutY="162.0" prefHeight="35.0" prefWidth="139.0" text="Pull-ups" textAlignment="JUSTIFY">
+        <TextField fx:id="pushupsField" layoutX="456.0" layoutY="92.0" prefHeight="43.0" prefWidth="240.0"
+                   promptText="e.g. 25" style="-fx-border-color: black; -fx-background-color: white;">
+            <font>
+                <Font name="Century Gothic Bold" size="16.0" />
+            </font>
+        </TextField>
+
+        <!-- Pull-ups -->
+        <Label layoutX="273.0" layoutY="162.0" prefHeight="35.0" prefWidth="139.0" text="Pull-ups">
             <font>
                 <Font name="Cooper Black" size="30.0" />
             </font>
         </Label>
-        <TextField layoutX="457.0" layoutY="279.0" prefHeight="43.0" prefWidth="240.0" style="-fx-border-color: black; -fx-background-color: white;">
-         <font>
-            <Font name="Century Gothic" size="16.0" />
-         </font></TextField>
-        <TextField layoutX="457.0" layoutY="408.0" prefHeight="43.0" prefWidth="240.0" style="-fx-border-color: black; -fx-background-color: white;">
-         <font>
-            <Font name="Century Gothic" size="16.0" />
-         </font></TextField>
-        <TextField layoutX="457.0" layoutY="345.0" prefHeight="43.0" prefWidth="240.0" style="-fx-border-color: black; -fx-background-color: white;">
-         <font>
-            <Font name="Century Gothic" size="16.0" />
-         </font></TextField>
-        <Label layoutX="273.0" layoutY="283.0" prefHeight="35.0" prefWidth="114.0" text="Lunges" textAlignment="JUSTIFY">
+        <TextField fx:id="pullupsField" layoutX="456.0" layoutY="158.0" prefHeight="43.0" prefWidth="240.0"
+                   style="-fx-border-color: black; -fx-background-color: white;">
+            <font>
+                <Font name="Century Gothic Bold" size="16.0" />
+            </font>
+        </TextField>
+
+        <!-- Squats -->
+        <Label layoutX="273.0" layoutY="225.0" prefHeight="35.0" prefWidth="139.0" text="Squats">
             <font>
                 <Font name="Cooper Black" size="30.0" />
             </font>
         </Label>
-        <Label layoutX="273.0" layoutY="412.0" prefHeight="35.0" prefWidth="139.0" text="Sit-ups" textAlignment="JUSTIFY">
+        <TextField fx:id="squatsField" layoutX="456.0" layoutY="221.0" prefHeight="43.0" prefWidth="240.0"
+                   style="-fx-border-color: black; -fx-background-color: white;">
+            <font>
+                <Font name="Century Gothic Bold" size="16.0" />
+            </font>
+        </TextField>
+
+        <!-- Lunges -->
+        <Label layoutX="273.0" layoutY="283.0" prefHeight="35.0" prefWidth="114.0" text="Lunges">
             <font>
                 <Font name="Cooper Black" size="30.0" />
             </font>
         </Label>
-        <Label layoutX="272.0" layoutY="349.0" prefHeight="35.0" prefWidth="139.0" text="Burpees" textAlignment="JUSTIFY">
+        <TextField fx:id="lungesField" layoutX="457.0" layoutY="279.0" prefHeight="43.0" prefWidth="240.0"
+                   style="-fx-border-color: black; -fx-background-color: white;">
+            <font>
+                <Font name="Century Gothic" size="16.0" />
+            </font>
+        </TextField>
+
+        <!-- Burpees -->
+        <Label layoutX="272.0" layoutY="349.0" prefHeight="35.0" prefWidth="139.0" text="Burpees">
             <font>
                 <Font name="Cooper Black" size="30.0" />
             </font>
         </Label>
-        <Label layoutX="227.0" layoutY="30.0" prefHeight="42.0" prefWidth="270.0" style="-fx-border-color: white; -fx-border-radius: 10; -fx-border-width: 3;" text="Enter your reps:" textAlignment="JUSTIFY" textFill="WHITE">
+        <TextField fx:id="burpeesField" layoutX="457.0" layoutY="345.0" prefHeight="43.0" prefWidth="240.0"
+                   style="-fx-border-color: black; -fx-background-color: white;">
+            <font>
+                <Font name="Century Gothic" size="16.0" />
+            </font>
+        </TextField>
+
+        <!-- Sit-ups -->
+        <Label layoutX="273.0" layoutY="412.0" prefHeight="35.0" prefWidth="139.0" text="Sit-ups">
             <font>
                 <Font name="Cooper Black" size="30.0" />
             </font>
         </Label>
-        <ImageView fitHeight="234.0" fitWidth="230.0" layoutX="704.0" layoutY="260.0" pickOnBounds="true" preserveRatio="true">
+        <TextField fx:id="situpsField" layoutX="457.0" layoutY="408.0" prefHeight="43.0" prefWidth="240.0"
+                   style="-fx-border-color: black; -fx-background-color: white;">
+            <font>
+                <Font name="Century Gothic" size="16.0" />
+            </font>
+        </TextField>
+
+        <!-- Done Button -->
+        <Button layoutX="796.0" layoutY="490.0" prefHeight="43.0" prefWidth="98.0" text="Done" onAction="#switchToScene9">
+            <font>
+                <Font name="Cooper Black" size="14.0" />
+            </font>
+        </Button>
+
+        <!-- Panda Image -->
+        <ImageView fitHeight="234.0" fitWidth="230.0" layoutX="704.0" layoutY="260.0">
             <image>
                 <Image url="@../images/SkippingPanda-Photoroom.png" />
             </image>
