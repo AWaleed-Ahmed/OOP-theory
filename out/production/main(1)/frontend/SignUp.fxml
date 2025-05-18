@@ -16,15 +16,24 @@
             <Image url="@../images/ColorfulBackground.jpg" />
          </image>
       </ImageView>
-      <TextField fx:id="usernameField" layoutX="63.0" layoutY="185.0" prefHeight="44.0" prefWidth="328.0" />
-      <PasswordField fx:id="passwordField" layoutX="63.0" layoutY="293.0" prefHeight="44.0" prefWidth="328.0" />
+      <TextField fx:id="usernameField" layoutX="63.0" layoutY="185.0" prefHeight="44.0" prefWidth="328.0" promptText="username / e-mail address">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font></TextField>
+      <PasswordField fx:id="passwordField" layoutX="63.0" layoutY="293.0" prefHeight="44.0" prefWidth="328.0" promptText="password">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font></PasswordField>
 
       <Button layoutX="421.0" layoutY="381.0" mnemonicParsing="false" onAction="#handleSignUp" onMouseClicked="#switchToScene3" prefHeight="35.0" prefWidth="87.0" text="Done" />
-      <Label layoutX="76.0" layoutY="306.0" opacity="0.65" text="password" />
-      <Label layoutX="75.0" layoutY="198.0" opacity="0.65" text="username / e-mail address" />
-      <Label layoutX="63.0" layoutY="273.0" text="PASSWORD" />
-      <Label layoutX="61.0" layoutY="165.0" text="USERNAME or EMAIL ADDRESS" />
-      <Label layoutX="137.0" layoutY="37.0" text="SIGN UP" underline="true" />
+      <Label layoutX="63.0" layoutY="273.0" text="PASSWORD">
+         <font>
+            <Font name="Century Gothic Bold" size="14.0" />
+         </font></Label>
+      <Label layoutX="61.0" layoutY="165.0" text="USERNAME or EMAIL ADDRESS">
+         <font>
+            <Font name="Century Gothic Bold" size="14.0" />
+         </font></Label>
       <Label layoutX="448.0" layoutY="37.0" text="Yesss," />
       <Label layoutX="448.0" layoutY="52.0" text="new member" />
       <Label layoutX="448.0" layoutY="71.0" text="onboard !!" />
@@ -48,19 +57,9 @@
             <Image url="@../images/dark-surface-with-chat-bubble-Photoroom.png" />
          </image>
       </ImageView>
-      <Label layoutX="448.0" layoutY="37.0" prefHeight="19.0" prefWidth="87.0" text="Yesss,">
+      <Label layoutX="448.0" layoutY="29.0" prefHeight="70.0" prefWidth="87.0" text="Yesss,new member onboard !!" textAlignment="CENTER" wrapText="true">
          <font>
-            <Font name="Comic Sans MS Bold" size="12.0" />
-         </font>
-      </Label>
-      <Label layoutX="448.0" layoutY="52.0" prefHeight="19.0" prefWidth="87.0" text="new member">
-         <font>
-            <Font name="Comic Sans MS Bold" size="12.0" />
-         </font>
-      </Label>
-      <Label layoutX="448.0" layoutY="71.0" prefHeight="19.0" prefWidth="87.0" text="onboard !!">
-         <font>
-            <Font name="Comic Sans MS Bold" size="12.0" />
+            <Font name="Comic Sans MS Bold" size="14.0" />
          </font>
       </Label>
    </children>

@@ -7,6 +7,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="979.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="backend.SceneController">
    <children>
@@ -41,10 +42,22 @@
             <Font name="Showcard Gothic" size="40.0" />
          </font>
       </Label>
-      <TextField fx:id="nameField" layoutX="624.0" layoutY="121.0" prefHeight="43.0" prefWidth="240.0" />
-      <TextField fx:id="ageField" layoutX="624.0" layoutY="183.0" prefHeight="43.0" prefWidth="240.0" />
-      <TextField fx:id="weightField" layoutX="624.0" layoutY="246.0" prefHeight="43.0" prefWidth="240.0" />
-      <TextField fx:id="heightField" layoutX="624.0" layoutY="307.0" prefHeight="43.0" prefWidth="240.0" />
+      <TextField fx:id="nameField" layoutX="624.0" layoutY="121.0" prefHeight="43.0" prefWidth="240.0" promptText="M. Ali">
+         <font>
+            <Font name="Showcard Gothic" size="16.0" />
+         </font></TextField>
+      <TextField fx:id="ageField" layoutX="624.0" layoutY="183.0" prefHeight="43.0" prefWidth="240.0" promptText="18">
+         <font>
+            <Font name="Showcard Gothic" size="16.0" />
+         </font></TextField>
+      <TextField fx:id="weightField" layoutX="624.0" layoutY="246.0" prefHeight="43.0" prefWidth="240.0" promptText="56">
+         <font>
+            <Font name="Showcard Gothic" size="16.0" />
+         </font></TextField>
+      <TextField fx:id="heightField" layoutX="624.0" layoutY="307.0" prefHeight="43.0" prefWidth="240.0" promptText="180">
+         <font>
+            <Font name="Showcard Gothic" size="16.0" />
+         </font></TextField>
       <Label layoutX="405.0" layoutY="125.0" prefHeight="34.0" prefWidth="165.0" text="FULL NAME" textAlignment="JUSTIFY">
          <font>
             <Font name="Showcard Gothic" size="24.0" />
@@ -70,12 +83,12 @@
             <Font name="Showcard Gothic" size="24.0" />
          </font>
       </Label>
-      <Button fx:id="maleButton" layoutX="624.0" layoutY="369.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="100.0" text="MALE" onAction="#handleMaleGender">
+      <Button fx:id="maleButton" layoutX="624.0" layoutY="369.0" mnemonicParsing="false" onAction="#handleMaleGender" prefHeight="34.0" prefWidth="100.0" text="MALE">
          <font>
             <Font name="Showcard Gothic" size="13.0" />
          </font>
       </Button>
-      <Button fx:id="femaleButton" layoutX="744.0" layoutY="369.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="100.0" text="FEMALE" onAction="#handleFemaleGender">
+      <Button fx:id="femaleButton" layoutX="744.0" layoutY="369.0" mnemonicParsing="false" onAction="#handleFemaleGender" prefHeight="34.0" prefWidth="100.0" text="FEMALE">
          <font>
             <Font name="Showcard Gothic" size="13.0" />
          </font>
@@ -90,5 +103,15 @@
             <Image url="@../images/GreetingWavingHelloPanda-Photoroom.png" />
          </image>
       </ImageView>
+      <Text layoutX="830.0" layoutY="274.0" strokeType="OUTSIDE" strokeWidth="0.0" text="kg" wrappingWidth="27.2496337890625">
+         <font>
+            <Font name="Comic Sans MS" size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="830.0" layoutY="334.0" strokeType="OUTSIDE" strokeWidth="0.0" text="cm" wrappingWidth="27.2496337890625">
+         <font>
+            <Font name="Comic Sans MS" size="18.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>

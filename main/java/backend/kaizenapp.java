@@ -1,5 +1,1 @@
-public class kaizenapp {
-    public static void main(String[] args) {
-
-    }
-}
+//  delete this class

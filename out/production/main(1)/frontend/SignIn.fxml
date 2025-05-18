@@ -28,24 +28,14 @@
          </image>
       </ImageView>
 
-      <PasswordField fx:id="passwordField" layoutX="650.0" layoutY="293.0" prefHeight="44.0" prefWidth="256.0">
+      <PasswordField fx:id="passwordField" layoutX="650.0" layoutY="293.0" prefHeight="44.0" prefWidth="256.0" promptText="password">
          <font>
             <Font name="Comic Sans MS" size="12.0" />
          </font>
       </PasswordField>
 
-      <TextField fx:id="usernameField" layoutX="650.0" layoutY="203.0" prefHeight="44.0" prefWidth="256.0" />
+      <TextField fx:id="usernameField" layoutX="650.0" layoutY="203.0" prefHeight="44.0" prefWidth="256.0" promptText="username" />
       <Button fx:id="nextButton" layoutX="820.0" layoutY="403.0" mnemonicParsing="false" onAction="#switchToScene3" prefHeight="30.0" prefWidth="77.0" text="Login" />
-      <Label layoutX="663.0" layoutY="306.0" opacity="0.65" prefHeight="18.0" prefWidth="87.0" text="password">
-         <font>
-            <Font name="Comic Sans MS" size="12.0" />
-         </font>
-      </Label>
-      <Label layoutX="663.0" layoutY="216.0" opacity="0.65" prefHeight="18.0" prefWidth="87.0" text="username">
-         <font>
-            <Font name="Comic Sans MS" size="12.0" />
-         </font>
-      </Label>
       <Label layoutX="670.0" layoutY="59.0" prefHeight="44.0" prefWidth="235.0" text="FITNESS PANDA" textFill="#1ab94c">
          <font>
             <Font name="Comic Sans MS Bold" size="26.0" />

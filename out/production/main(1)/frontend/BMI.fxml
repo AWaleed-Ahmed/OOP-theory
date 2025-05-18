@@ -5,59 +5,75 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="477.0" prefWidth="954.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="477.0" prefWidth="938.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="backend.SceneController">
    <children>
-      <ImageView fitHeight="955.0" fitWidth="486.0" layoutX="239.0" layoutY="-239.0" opacity="0.9" pickOnBounds="true" preserveRatio="true" rotate="90.0">
-         <image>
-            <Image url="@../images/curlyLinedMultiColorGreenBackground.jpeg" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="319.0" fitWidth="255.0" layoutX="470.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../images/BMIScale.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="216.0" fitWidth="213.0" layoutX="741.0" layoutY="264.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../images/GreetingByePanda-Photoroom.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="439.0" fitWidth="306.0" layoutX="91.0" layoutY="-16.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
-         <image>
-            <Image url="@../images/whiteBackground.jpg" />
-         </image>
-      </ImageView>
-      <Label layoutX="47.0" layoutY="64.0" prefHeight="49.0" prefWidth="362.0" text="BMI CALCULATOR">
-         <font>
-            <Font name="Cooper Black" size="36.0" />
-         </font>
-      </Label>
-      <Label layoutX="47.0" layoutY="145.0" prefHeight="50.0" prefWidth="93.0" text="LEVEL: ">
-         <font>
-            <Font name="Cooper Black" size="22.0" />
-         </font>
-      </Label>
-      <Label layoutX="47.0" layoutY="219.0" prefHeight="38.0" prefWidth="94.0" text="INDEX: ">
-         <font>
-            <Font name="Cooper Black" size="22.0" />
-         </font>
-      </Label>
-      <Label fx:id="levelLabel" layoutX="175.0" layoutY="151.0" prefHeight="38.0" prefWidth="157.0" underline="true">
-         <font>
-            <Font name="Cooper Black" size="22.0" />
-         </font>
-      </Label>
-      <Label fx:id="bmiLabel" layoutX="175.0" layoutY="219.0" prefHeight="38.0" prefWidth="157.0" underline="true">
-         <font>
-            <Font name="Cooper Black" size="22.0" />
-         </font>
-      </Label>
-      <Button layoutX="313.0" layoutY="286.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="83.0" text="NEXT">
-         <font>
-            <Font name="Cooper Black" size="14.0" />
-         </font>
-      </Button>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="477.0" prefWidth="954.0">
+         <children>
+            <ImageView fitHeight="955.0" fitWidth="486.0" layoutX="239.0" layoutY="-239.0" opacity="0.9" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+               <image>
+                  <Image url="@../images/curlyLinedMultiColorGreenBackground.jpeg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="216.0" fitWidth="213.0" layoutX="705.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/GreetingByePanda-Photoroom.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="487.0" fitWidth="321.0" layoutX="106.0" layoutY="-22.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+               <image>
+                  <Image url="@../images/whiteBackground.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="47.0" layoutY="64.0" prefHeight="49.0" prefWidth="362.0" text="BMI CALCULATOR">
+               <font>
+                  <Font name="Cooper Black" size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="47.0" layoutY="145.0" prefHeight="50.0" prefWidth="93.0" text="LEVEL: ">
+               <font>
+                  <Font name="Cooper Black" size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="47.0" layoutY="219.0" prefHeight="38.0" prefWidth="94.0" text="INDEX: ">
+               <font>
+                  <Font name="Cooper Black" size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="levelLabel" layoutX="141.0" layoutY="151.0" prefHeight="38.0" prefWidth="157.0" underline="true">
+               <font>
+                  <Font name="Cooper Black" size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="bmiLabel" layoutX="141.0" layoutY="219.0" prefHeight="38.0" prefWidth="157.0" underline="true">
+               <font>
+                  <Font name="Cooper Black" size="22.0" />
+               </font>
+            </Label>
+            <Button layoutX="835.0" layoutY="412.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="83.0" text="NEXT" onAction="#switchToScene10">
+            <font>
+                  <Font name="Cooper Black" size="14.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="242.0" fitWidth="191.0" layoutX="314.0" layoutY="151.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/BMIScale.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="303.0" fitWidth="327.0" layoutX="550.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="/images/v1018-elements-006-Photoroom.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="622.0" layoutY="95.0" prefHeight="92.0" prefWidth="142.0" wrapText="true">
+               <font>
+                  <Font name="Comic Sans MS" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
    </children>
-</AnchorPane>
+</StackPane>
