@@ -7,13 +7,10 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="475.0" prefWidth="950.0"
-            xmlns="http://javafx.com/javafx/23.0.1"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="backend.SceneController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="backend.SceneController">
     <children>
         <!-- Backgrounds -->
-        <ImageView fitHeight="1064.0" fitWidth="479.0" layoutX="293.0" layoutY="-293.0" rotate="90.0">
+        <ImageView fitHeight="979.0" fitWidth="485.0" layoutX="221.0" layoutY="-250.0" rotate="90.0">
             <image>
                 <Image url="@../images/layeredMultiGreenBackground.jpeg" />
             </image>
@@ -31,45 +28,42 @@
             </font>
         </Button>
 
-        <!-- Decorative Images -->
-        <ImageView fitHeight="252.0" fitWidth="239.0" layoutX="444.0" layoutY="91.0">
-            <image>
-                <Image url="@../images/DumbellPanda-Photoroom.png" />
-            </image>
-        </ImageView>
-        <ImageView fitHeight="253.0" fitWidth="223.0" layoutX="683.0" layoutY="99.0">
-            <image>
-                <Image url="@../images/LiftingPanda-Photoroom.png" />
-            </image>
-        </ImageView>
-
-        <!-- Rank Title Label -->
-        <Label layoutX="41.0" layoutY="110.0" prefHeight="34.0" prefWidth="120.0"
-               style="-fx-border-color: black; -fx-border-radius: 8; -fx-border-width: 3;" text="Rank:">
-            <font>
-                <Font name="Cooper Black" size="24.0" />
-            </font>
-        </Label>
-
         <!-- Dynamic Rank Display -->
-        <Label fx:id="rankLabel" layoutX="170.0" layoutY="110.0" prefHeight="34.0" prefWidth="300.0"
-               style="-fx-border-color: black; -fx-border-radius: 8; -fx-border-width: 3;">
+        <Label fx:id="rankLabel" layoutX="42.0" layoutY="110.0" prefHeight="34.0" prefWidth="300.0" style="-fx-border-color: black; -fx-border-radius: 8; -fx-border-width: 3;">
             <font>
                 <Font name="Cooper Black" size="24.0" />
             </font>
         </Label>
 
         <!-- Suggestions Title -->
-        <Label layoutX="41.0" layoutY="191.0" prefHeight="34.0" prefWidth="166.0"
-               style="-fx-border-color: black; -fx-border-radius: 8; -fx-border-width: 3;" text="Suggestions:">
+        <Label layoutX="41.0" layoutY="191.0" prefHeight="34.0" prefWidth="166.0" style="-fx-border-color: black; -fx-border-radius: 8; -fx-border-width: 3;" text="Suggestions:">
             <font>
                 <Font name="Cooper Black" size="24.0" />
             </font>
         </Label>
+      <ImageView fitHeight="252.0" fitWidth="239.0" layoutX="443.0" layoutY="101.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../OOP-theoryfinal/main/resources/images/DumbellPanda-Photoroom.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="253.0" fitWidth="223.0" layoutX="682.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../OOP-theoryfinal/main/resources/images/LiftingPanda-Photoroom.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="662.0" layoutY="301.0" prefHeight="38.0" prefWidth="278.0" style="-fx-background-color: teal; -fx-border-color: black; -fx-background-radius: 10; -fx-border-radius: 10; -fx-border-width: 3;" text=" GET YOURSELF A GYM BRO">
+         <font>
+            <Font name="Comic Sans MS Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="474.0" layoutY="109.0" prefHeight="38.0" prefWidth="104.0" style="-fx-background-color: teal; -fx-border-color: black; -fx-background-radius: 10; -fx-border-radius: 10; -fx-border-width: 3;" text=" PRO TIP?">
+         <font>
+            <Font name="Comic Sans MS Bold" size="18.0" />
+         </font>
+      </Label>
 
         <!-- Dynamic Suggestion Display -->
-        <Label fx:id="suggestionLabel" layoutX="42.0" layoutY="234.0" prefHeight="100.0" prefWidth="358.0"
-               wrapText="true" style="-fx-background-color: teal; -fx-border-color: black; -fx-background-radius: 10; -fx-border-radius: 10; -fx-border-width: 3;">
+        <Label fx:id="suggestionLabel" layoutX="42.0" layoutY="234.0" prefHeight="100.0" prefWidth="358.0" style="-fx-border-color: black; -fx-background-radius: 10; -fx-border-radius: 10; -fx-border-width: 3;" wrapText="true">
             <font>
                 <Font name="Comic Sans MS" size="16.0" />
             </font>
