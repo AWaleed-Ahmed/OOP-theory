@@ -29,7 +29,7 @@
         </Button>
 
         <!-- Dynamic Rank Display -->
-        <Label fx:id="rankLabel" layoutX="42.0" layoutY="110.0" prefHeight="34.0" prefWidth="300.0" style="-fx-border-color: black; -fx-border-radius: 8; -fx-border-width: 3;">
+        <Label fx:id="rankLabel" layoutX="42.0" layoutY="110.0" prefHeight="36.0" prefWidth="278.0" style="-fx-border-color: black; -fx-border-radius: 8; -fx-border-width: 3;">
             <font>
                 <Font name="Cooper Black" size="24.0" />
             </font>
@@ -43,12 +43,12 @@
         </Label>
       <ImageView fitHeight="252.0" fitWidth="239.0" layoutX="443.0" layoutY="101.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../OOP-theoryfinal/main/resources/images/DumbellPanda-Photoroom.png" />
+            <Image url="@../images/DumbellPanda-Photoroom.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="253.0" fitWidth="223.0" layoutX="682.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../OOP-theoryfinal/main/resources/images/LiftingPanda-Photoroom.png" />
+            <Image url="@../images/LiftingPanda-Photoroom.png" />
          </image>
       </ImageView>
       <Label layoutX="662.0" layoutY="301.0" prefHeight="38.0" prefWidth="278.0" style="-fx-background-color: teal; -fx-border-color: black; -fx-background-radius: 10; -fx-border-radius: 10; -fx-border-width: 3;" text=" GET YOURSELF A GYM BRO">
