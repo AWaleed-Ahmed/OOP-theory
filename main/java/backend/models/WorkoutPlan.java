@@ -99,12 +99,12 @@ public class WorkoutPlan {
 
     public static String getSuggestion(String rank) {
         return switch (rank) {
-            case "Elite" -> "GET YOURSELF A GYM BRO";
-            case "Advanced" -> "You’re killing it! Stay consistent.";
-            case "Intermediate" -> "Great work! Try adding resistance training.";
-            case "Beginner" -> "Try to gradually increase your reps.";
-            case "Novice" -> "Start small, build discipline!";
-            default -> "Keep moving!";
+            case "Elite" -> "\"Train smart and heavy, track progress weekly, and guide others who admire your discipline.\"";
+            case "Advanced" -> "\"Focus on muscle symmetry, optimize rest days, and start refining your diet for lean gains.\"";
+            case "Intermediate" -> "\"Incorporate progressive overload, maintain proper form, and start exploring compound lifts with supervision.\"";
+            case "Beginner" -> "\"Build a consistent weekly routine, focus on form, and gradually increase intensity to avoid burnout.\"";
+            case "Novice" -> "\"Start with body weight exercises, hydrate well, set small goals, and stay patient through the beginning phase.\"";
+            default -> "You got this, Keep moving!";
         };
     }
 }

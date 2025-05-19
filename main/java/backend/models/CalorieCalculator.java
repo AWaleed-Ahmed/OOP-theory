@@ -18,7 +18,7 @@ public class CalorieCalculator {
 
 
     private void settingCalorie() {
-        foodCalorie.put("rice", 1.3);
+        foodCalorie.put("rice", 1.3);    // calculating per gram calroies of each item
         foodCalorie.put("chicken", 2.4);
         foodCalorie.put("beef", 2.5);
         foodCalorie.put("wheatGrain", 3.4);
@@ -97,7 +97,7 @@ public class CalorieCalculator {
         return "Your BMI: " + bmi + "\n\n" + bmiTip + "\n\n" + "Goal-based advice:\n" + goalAdvice;
     }
 
-    // 🔥 Static method for SceneController to use calorie values easily
+    // Static method for SceneController to use calorie values easily
     public static int getCaloriesFromMap(String food, int grams) {
         if (food == null || food.isEmpty()) return 0;
         food = food.toLowerCase();
