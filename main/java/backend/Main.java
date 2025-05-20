@@ -20,7 +20,7 @@ public class Main extends Application {
         try {
             Parent root = (Parent)FXMLLoader.load((URL)Objects.requireNonNull(this.getClass().getResource("/frontend/SignIn.fxml")));
             stage.setScene(new Scene(root));
-            stage.setTitle("Fitness App - Sign In");
+            stage.setTitle("Fitness Panda");
             stage.show();
             auth.loadUsersFromFile();
         } catch (Exception e) {

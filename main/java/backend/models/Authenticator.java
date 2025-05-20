@@ -15,13 +15,13 @@ import java.util.Scanner;
 public class Authenticator {
     String[] username = new String[50];
     int[] password = new int[50];
-    int usercount = 0;
-    int nameindex = 8;
-    int passwordindex = -1;
+    int userCount = 0;
+    int nameIndex = 8;
+    int passwordIndex = -1;
 
     public void signup(String newUsername, int newPassword) {
-        this.username[this.usercount] = newUsername;
-        this.password[this.usercount] = newPassword;
+        this.username[this.userCount] = newUsername;
+        this.password[this.userCount] = newPassword;
 
         try (BufferedWriter writer = new BufferedWriter(new FileWriter("users.txt", true))) {
             writer.write(newUsername + "," + newPassword);
@@ -30,7 +30,7 @@ public class Authenticator {
             System.out.println("Error saving to file: " + e.getMessage());
         }
 
-        ++this.usercount;
+        ++this.userCount;
         System.out.println("Signup successful! Now please login.");
     }
 
@@ -47,41 +47,41 @@ public class Authenticator {
                 this.password[i] = Integer.parseInt(userData[1]);
             }
 
-            this.usercount = i;
+            this.userCount = i;
         } catch (FileNotFoundException var6) {
             System.out.println("User file not found, starting fresh.");
         }
 
     }
 
-    public void verifyusername(String name) {
-        for(int i = 0; i < this.usercount; ++i) {
+    public void verifyUsername(String name) {
+        for(int i = 0; i < this.userCount; ++i) {
             if (this.username[i].equals(name)) {
-                this.nameindex = i;
+                this.nameIndex = i;
             }
         }
 
-        if (this.nameindex == 8) {
+        if (this.nameIndex == 8) {
             System.out.println("Invalid username ! not found in record");
         }
 
     }
 
-    public void verifypassword(int key) {
-        for(int i = 0; i < this.usercount; ++i) {
+    public void verifyPassword(int key) {
+        for(int i = 0; i < this.userCount; ++i) {
             if (this.password[i] == key) {
-                this.passwordindex = i;
+                this.passwordIndex = i;
             }
         }
 
-        if (this.passwordindex == -1) {
+        if (this.passwordIndex == -1) {
             System.out.println("invalid password!! Not found in record");
         }
 
     }
 
     public boolean verify() {
-        if (this.passwordindex == this.nameindex) {
+        if (this.passwordIndex == this.nameIndex) {
             System.out.println("Welcome \ud83d\ude18 NOW LETS GET STARTED GIVE ME SOME FOLLOWING CREDENTIALS ");
             return true;
         } else {

@@ -7,12 +7,11 @@ public class WorkoutPlan {
     private int lunges;
     private int burpees;
     private int sitUps;
-    private int running; // running is considered in "reps" (e.g., km)
 
     private int totalExercises;
     private int totalReps;
 
-    // Setters sare
+    // All Setters
     public void setPushUps(int pushUps) {
         this.pushUps = Math.max(pushUps, 0);
     }
@@ -37,18 +36,13 @@ public class WorkoutPlan {
         this.sitUps = Math.max(sitUps, 0);
     }
 
-    public void setRunning(int running) {
-        this.running = Math.max(running, 0);
-    }
-
-    // Getters sare
+    // All Getters
     public int getPushUps() { return pushUps; }
     public int getPullUps() { return pullUps; }
     public int getSquats() { return squats; }
     public int getLunges() { return lunges; }
     public int getBurpees() { return burpees; }
     public int getSitUps() { return sitUps; }
-    public int getRunning() { return running; }
     public int getTotalExercises() { return totalExercises; }
     public int getTotalReps() { return totalReps; }
 
@@ -80,10 +74,6 @@ public class WorkoutPlan {
         if (sitUps > 0) {
             totalExercises++;
             totalReps += sitUps;
-        }
-        if (running > 0) {
-            totalExercises++;
-            totalReps += running;
         }
     }
 

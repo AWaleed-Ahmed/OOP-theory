@@ -41,13 +41,13 @@ public class SceneController {
         PasswordField passwordField = (PasswordField) parent.lookup("#passwordField");
         Label loginMessage = (Label) parent.lookup("#loginMessage");
 
-        String username = usernameField.getText();
+        String userName = usernameField.getText();
         String passwordText = passwordField.getText();
 
         try {
             int password = Integer.parseInt(passwordText);
-            auth.verifyusername(username);
-            auth.verifypassword(password);
+            auth.verifyUsername(userName);
+            auth.verifyPassword(password);
             if (auth.verify()) {
                 switchScene(event, "/frontend/UserData(UI).fxml");
             } else {
@@ -64,17 +64,18 @@ public class SceneController {
         TextField usernameField = (TextField) parent.lookup("#usernameField");
         PasswordField passwordField = (PasswordField) parent.lookup("#passwordField");
 
-        String username = usernameField.getText();
+        String userName = usernameField.getText();
         String passwordText = passwordField.getText();
 
         try {
             int password = Integer.parseInt(passwordText);
-            auth.signup(username, password);
+            auth.signup(userName, password);
             switchToScene1(event);
         } catch (NumberFormatException e) {
             System.out.println("Password must be numeric.");
         }
     }
+
     public double bmi2;
     public void switchToScene4(ActionEvent event) throws IOException {
         try {
