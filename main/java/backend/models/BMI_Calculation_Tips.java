@@ -15,6 +15,7 @@ public class BMI_Calculation_Tips {
         return bmi;
     }
 
+    // to be edited
     public String getTips() {
         StringBuilder tips = new StringBuilder();
 // change the tips

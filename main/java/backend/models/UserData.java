@@ -13,52 +13,55 @@ public class UserData {
     private double weight;
     private double height;
     public Scanner sc;
+    private String name;
 
     public UserData() {
         this.sc = new Scanner(System.in);
     }
-    public void setAge(int age) {
-        if (age <= 0) {
-//            System.out.println("invalid age ");
+
+    public void setName(String name) {
+        if (!(name == null)) {
+            String trimmedName = name.trim();
+            if (!(trimmedName.isEmpty())) {
+                if (trimmedName.matches("[a-zA-Z]+")) {
+                    this.name = name;
+                }
+            }
         }
-
-        this.age = age;
+        else {
+            // set text label to invalid name
+        }
     }
 
-    public int getAge() {
-        return this.age;
-    }
-
-    public String getGender() {
-        return this.gender;
+    public void setAge(int age) {
+        if (age >= 2) {
+            this.age = age;
+        }
+        else {
+            // set text label to invalid age
+        }
     }
 
     public void setGender(String gender) {
         this.gender = gender;
     }
 
-    public double getWeigth() {
-        return this.weight;
-    }
-
-    public void setWeigth(double weigth) {
-        if (weigth <= (double)0.0F) {
-//            System.out.println("invalid weigth");
+    public void setWeight(double weight) {
+        if (weight >= (double)0.0F) {
+            this.weight = weight;
         }
-
-        this.weight = weight;
-    }
-
-    public double getHeigth() {
-        return this.height;
-    }
-
-    public void setHeigth(double heigth) {
-        if (heigth <= (double)0.0F) {
-//            System.out.println("invalid heigth");
+        else {
+            // set text label to invalid weight
         }
+    }
 
-        this.height = heigth;
+    public void setHeight(double height) {
+        if (height >= (double)0.0F) {
+            this.height = height;
+        }
+        else {
+            // set text label to invalid weight
+        }
     }
 
 //    public void display2() {

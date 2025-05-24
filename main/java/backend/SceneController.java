@@ -80,15 +80,17 @@ public class SceneController {
     public double bmi2;
     public void switchToScene4(ActionEvent event) throws IOException {
         try {
+            String name = nameField.getText();
             int age = Integer.parseInt(ageField.getText());
             this.weight = Double.parseDouble(weightField.getText());
             this.height = Double.parseDouble(heightField.getText());
 
             UserData userData = new UserData();
+            userData.setName(name);
             userData.setAge(age);
             userData.setGender(gender);
-            userData.setWeigth(weight);
-            userData.setHeigth(height);
+            userData.setWeight(weight);
+            userData.setHeight(height);
 
             BMI_Calculation_Tips calc = new BMI_Calculation_Tips();
             calc.bmical(weight, height);

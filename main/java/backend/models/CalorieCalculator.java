@@ -55,14 +55,14 @@ public class CalorieCalculator {
         totalCalories += itemCalories;
     }
 
-    public void setGoal(String goal) {
-        this.selectedGoal = goal.toLowerCase();
-    }
-
-    public String getSelectedGoal() {
-        return selectedGoal;
-    }
-
+//    public void setGoal(String goal) {
+//        this.selectedGoal = goal.toLowerCase();
+//    }
+//
+//    public String getSelectedGoal() {
+//        return selectedGoal;
+//    }
+//
     public double getTotalCalories() {
         return totalCalories;
     }
