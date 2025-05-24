@@ -19,7 +19,7 @@ public class UserData {
     }
     public void setAge(int age) {
         if (age <= 0) {
-            System.out.println("invalid age ");
+//            System.out.println("invalid age ");
         }
 
         this.age = age;
@@ -43,7 +43,7 @@ public class UserData {
 
     public void setWeigth(double weigth) {
         if (weigth <= (double)0.0F) {
-            System.out.println("invalid weigth");
+//            System.out.println("invalid weigth");
         }
 
         this.weight = weight;
@@ -55,21 +55,21 @@ public class UserData {
 
     public void setHeigth(double heigth) {
         if (heigth <= (double)0.0F) {
-            System.out.println("invalid heigth");
+//            System.out.println("invalid heigth");
         }
 
         this.height = heigth;
     }
 
-    public void display2() {
-        System.out.println();
-        System.out.println("KINDLY ENTER YOUR AGE : ");
-        this.setAge(this.sc.nextInt());
-        System.out.println("KINDLY ENTER YOUR GENDER: ");
-        this.setGender(this.sc.next());
-        System.out.println("KINDLY ENTER YOUR WEIGTH IN KGS : ");
-        this.setWeigth(this.sc.nextDouble());
-        System.out.println("KINDLY ENTER YOUR HEIGTH IN CMS : ");
-        this.setHeigth(this.sc.nextDouble());
-    }
+//    public void display2() {
+//        System.out.println();
+//        System.out.println("KINDLY ENTER YOUR AGE : ");
+//        this.setAge(this.sc.nextInt());
+//        System.out.println("KINDLY ENTER YOUR GENDER: ");
+//        this.setGender(this.sc.next());
+//        System.out.println("KINDLY ENTER YOUR WEIGTH IN KGS : ");
+//        this.setWeigth(this.sc.nextDouble());
+//        System.out.println("KINDLY ENTER YOUR HEIGTH IN CMS : ");
+//        this.setHeigth(this.sc.nextDouble());
+//    }
 }

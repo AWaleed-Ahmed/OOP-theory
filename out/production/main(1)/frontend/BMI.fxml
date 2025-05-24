@@ -14,7 +14,7 @@
       <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="477.0" prefWidth="954.0">
          <children>
             <!-- Background Images -->
-            <ImageView fitHeight="955.0" fitWidth="486.0" layoutX="239.0" layoutY="-239.0" opacity="0.9" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+            <ImageView fitHeight="955.0" fitWidth="486.0" layoutX="238.0" layoutY="-239.0" opacity="0.9" pickOnBounds="true" preserveRatio="true" rotate="90.0">
                <image>
                   <Image url="@../images/curlyLinedMultiColorGreenBackground.jpeg" />
                </image>
@@ -27,31 +27,31 @@
             </ImageView>
 
             <!-- Main Content -->
-            <Label layoutX="47.0" layoutY="64.0" prefHeight="50.0" prefWidth="385.0" text="BMI CALCULATOR">
+            <Label layoutX="47.0" layoutY="64.0" prefHeight="50.0" prefWidth="385.0" text="BMI CALCULATOR" textFill="#0f7060">
                <font>
                   <Font name="Cooper Black" size="38.0" />
                </font>
             </Label>
 
-            <Label layoutX="47.0" layoutY="145.0" prefHeight="50.0" prefWidth="109.0" text="LEVEL: ">
+            <Label layoutX="47.0" layoutY="145.0" prefHeight="50.0" prefWidth="109.0" text="LEVEL: " textFill="#0f7060">
                <font>
                   <Font name="Cooper Black" size="26.0" />
                </font>
             </Label>
 
-            <Label layoutX="47.0" layoutY="249.0" prefHeight="38.0" prefWidth="110.0" text="INDEX: ">
+            <Label layoutX="47.0" layoutY="249.0" prefHeight="38.0" prefWidth="110.0" text="INDEX: " textFill="#0f7060">
                <font>
                   <Font name="Cooper Black" size="26.0" />
                </font>
             </Label>
 
-            <Label fx:id="levelLabel" layoutX="91.0" layoutY="187.0" prefHeight="38.0" prefWidth="157.0" underline="true">
+            <Label fx:id="levelLabel" layoutX="91.0" layoutY="187.0" prefHeight="38.0" prefWidth="157.0" textFill="#0f7060" underline="true">
                <font>
                   <Font name="Cooper Black" size="22.0" />
                </font>
             </Label>
 
-            <Label fx:id="bmiLabel" layoutX="102.0" layoutY="287.0" prefHeight="38.0" prefWidth="157.0" underline="true">
+            <Label fx:id="bmiLabel" layoutX="102.0" layoutY="287.0" prefHeight="38.0" prefWidth="157.0" textFill="#0f7060" underline="true">
                <font>
                   <Font name="Cooper Black" size="22.0" />
                </font>
@@ -77,14 +77,14 @@
                </image>
             </ImageView>
 
-            <Label layoutX="622.0" layoutY="95.0" prefHeight="92.0" prefWidth="142.0" wrapText="true">
+            <Label layoutX="622.0" layoutY="95.0" prefHeight="92.0" prefWidth="142.0" textFill="#0f7060" wrapText="true">
                <font>
                   <Font name="Comic Sans MS" size="16.0" />
                </font>
             </Label>
 
             <!-- Next Button -->
-            <Button layoutX="835.0" layoutY="412.0" mnemonicParsing="false" onAction="#switchToScene10" prefHeight="38.0" prefWidth="83.0" text="NEXT">
+            <Button layoutX="835.0" layoutY="412.0" mnemonicParsing="false" onAction="#switchToScene10" prefHeight="38.0" prefWidth="89.0" style="-fx-background-color: grey; -fx-border-color: black; -fx-border-width: 2; -fx-border-radius: 8; -fx-background-radius: 8;" text="NEXT">
                <font>
                   <Font name="Cooper Black" size="14.0" />
                </font>

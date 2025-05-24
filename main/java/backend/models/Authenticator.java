@@ -1,8 +1,3 @@
-//
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by FernFlower decompiler)
-//
-
 package backend.models;
 
 import java.io.BufferedWriter;
@@ -27,11 +22,11 @@ public class Authenticator {
             writer.write(newUsername + "," + newPassword);
             writer.newLine();
         } catch (IOException e) {
-            System.out.println("Error saving to file: " + e.getMessage());
+//            System.out.println("Error saving to file: " + e.getMessage());
         }
 
         ++this.userCount;
-        System.out.println("Signup successful! Now please login.");
+//        System.out.println("Signup successful! Now please login.");
     }
 
     public void loadUsersFromFile() {
@@ -49,12 +44,13 @@ public class Authenticator {
 
             this.userCount = i;
         } catch (FileNotFoundException var6) {
-            System.out.println("User file not found, starting fresh.");
+//            System.out.println("User file not found, starting fresh.");
         }
 
     }
 
     public void verifyUsername(String name) {
+
         for(int i = 0; i < this.userCount; ++i) {
             if (this.username[i].equals(name)) {
                 this.nameIndex = i;
@@ -62,7 +58,7 @@ public class Authenticator {
         }
 
         if (this.nameIndex == 8) {
-            System.out.println("Invalid username ! not found in record");
+//            System.out.println("Invalid username ! not found in record");
         }
 
     }
@@ -75,17 +71,17 @@ public class Authenticator {
         }
 
         if (this.passwordIndex == -1) {
-            System.out.println("invalid password!! Not found in record");
+//            System.out.println("invalid password!! Not found in record");
         }
 
     }
 
     public boolean verify() {
         if (this.passwordIndex == this.nameIndex) {
-            System.out.println("Welcome \ud83d\ude18 NOW LETS GET STARTED GIVE ME SOME FOLLOWING CREDENTIALS ");
+//            System.out.println("Welcome \ud83d\ude18 NOW LETS GET STARTED GIVE ME SOME FOLLOWING CREDENTIALS ");
             return true;
         } else {
-            System.out.println("your username donot match your password ");
+//            System.out.println("your username donot match your password ");
             return false;
         }
     }

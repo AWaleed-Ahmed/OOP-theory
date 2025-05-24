@@ -28,40 +28,43 @@
          </image>
       </ImageView>
 
-      <PasswordField fx:id="passwordField" layoutX="650.0" layoutY="293.0" prefHeight="44.0" prefWidth="256.0" promptText="password">
+      <PasswordField fx:id="passwordField" layoutX="650.0" layoutY="276.0" prefHeight="44.0" prefWidth="256.0" promptText="password">
          <font>
             <Font name="Comic Sans MS" size="12.0" />
          </font>
       </PasswordField>
 
-      <TextField fx:id="usernameField" layoutX="650.0" layoutY="203.0" prefHeight="44.0" prefWidth="256.0" promptText="username" />
-      <Button fx:id="nextButton" layoutX="820.0" layoutY="403.0" mnemonicParsing="false" onAction="#switchToScene3" prefHeight="30.0" prefWidth="77.0" text="Login" />
-      <Label layoutX="670.0" layoutY="59.0" prefHeight="44.0" prefWidth="235.0" text="FITNESS PANDA" textFill="#1ab94c">
+      <TextField fx:id="usernameField" layoutX="650.0" layoutY="186.0" prefHeight="44.0" prefWidth="256.0" promptText="username" />
+      <Button fx:id="nextButton" layoutX="820.0" layoutY="403.0" mnemonicParsing="false" onAction="#switchToScene3" prefHeight="30.0" prefWidth="77.0" style="-fx-background-color: grey; -fx-border-color: black;" text="Login">
          <font>
-            <Font name="Comic Sans MS Bold" size="26.0" />
+            <Font name="Constantia" size="13.0" />
+         </font></Button>
+      <Label layoutX="650.0" layoutY="50.0" prefHeight="44.0" prefWidth="269.0" text="FITNESS PANDA" textFill="#209969">
+         <font>
+            <Font name="Cooper Black" size="30.0" />
          </font>
       </Label>
-      <Label layoutX="653.0" layoutY="266.0" prefHeight="18.0" prefWidth="87.0" text="PASSWORD" textFill="#1ab94c">
+      <Label layoutX="653.0" layoutY="249.0" prefHeight="18.0" prefWidth="87.0" text="PASSWORD" textFill="#209969">
          <font>
-            <Font name="Comic Sans MS Bold" size="13.0" />
+            <Font name="Comic Sans MS Bold" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="653.0" layoutY="177.0" prefHeight="18.0" prefWidth="87.0" text="USERNAME" textFill="#1ab94c">
+      <Label layoutX="653.0" layoutY="160.0" prefHeight="18.0" prefWidth="87.0" text="USERNAME" textFill="#209969">
          <font>
-            <Font name="Comic Sans MS Bold" size="13.0" />
+            <Font name="Comic Sans MS Bold" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="680.0" layoutY="94.0" prefHeight="18.0" prefWidth="215.0" text="&quot; Stay Chunky (But Functional)! &quot;" textFill="#1ab94c">
+      <Label layoutX="677.0" layoutY="84.0" prefHeight="18.0" prefWidth="215.0" text="&quot; Stay Chunky (But Functional)! &quot;" textFill="#209969">
          <font>
-            <Font name="Comic Sans MS Bold Italic" size="12.0" />
+            <Font name="Comic Sans MS Bold Italic" size="13.0" />
          </font>
       </Label>
-      <Label layoutX="685.0" layoutY="345.0" prefHeight="18.0" prefWidth="135.0" text="Don't have an account?" textFill="#1ab94c">
+      <Label layoutX="697.0" layoutY="328.0" prefHeight="18.0" prefWidth="135.0" text="Don't have an account?" textFill="#209969">
          <font>
             <Font name="Comic Sans MS" size="12.0" />
          </font>
       </Label>
-      <Hyperlink layoutX="819.0" layoutY="342.0" onAction="#switchToScene5" prefHeight="25.0" prefWidth="59.0" text="Sign up">
+      <Hyperlink layoutX="829.0" layoutY="325.0" onAction="#switchToScene5" prefHeight="25.0" prefWidth="59.0" text="Sign up">
          <font>
             <Font name="Comic Sans MS" size="12.0" />
          </font>
@@ -71,6 +74,9 @@
             <Image url="@../images/CoolPanda-Photoroom.png" />
          </image>
       </ImageView>
-      <Label fx:id="loginMessage" layoutX="650.0" layoutY="360.0" prefHeight="18.0" prefWidth="256.0" text="" textFill="RED" />
+      <Label fx:id="loginMessage" layoutX="658.0" layoutY="346.0" prefHeight="18.0" prefWidth="256.0" text="" textFill="RED">
+         <font>
+            <Font name="Constantia" size="12.0" />
+         </font></Label>
    </children>
 </AnchorPane>

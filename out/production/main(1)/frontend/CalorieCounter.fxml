@@ -10,7 +10,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="544.0" prefWidth="968.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="backend.SceneController">
    <children>
-      <ImageView fitHeight="997.0" fitWidth="572.0" layoutX="218.0" layoutY="-218.0" opacity="0.87" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+      <ImageView fitHeight="997.0" fitWidth="572.0" layoutX="218.0" layoutY="-218.0" opacity="0.91" pickOnBounds="true" preserveRatio="true" rotate="90.0">
          <image>
             <Image url="@../images/abstractDarkGreenBackground.jpeg" />
          </image>
@@ -48,7 +48,7 @@
       <TextField fx:id="oatsAmount" layoutX="809.0" layoutY="362.0" prefHeight="22.0" prefWidth="40.0" promptText="0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 2; -fx-alignment: center;" />
       <TextField fx:id="peanutButterAmount" layoutX="809.0" layoutY="432.0" prefHeight="22.0" prefWidth="40.0" promptText="0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 2; -fx-alignment: center;" />
 
-      <Label layoutX="233.0" layoutY="30.0" prefHeight="50.0" prefWidth="507.0" style="-fx-background-color: yellow; -fx-background-radius: 10; -fx-border-color: black; -fx-border-radius: 10; -fx-border-width: 3;" text=" CALORIE CALCULATOR    ">
+      <Label layoutX="233.0" layoutY="30.0" prefHeight="50.0" prefWidth="507.0" style="-fx-background-color: DarkTurquoise; -fx-background-radius: 10; -fx-border-color: black; -fx-border-radius: 10; -fx-border-width: 3;" text=" CALORIE CALCULATOR    " textFill="#24539c">
          <font>
             <Font name="Cooper Black" size="36.0" />
          </font>
@@ -65,7 +65,7 @@
          </image>
       </ImageView>
 
-      <Label alignment="CENTER_RIGHT" layoutX="52.0" layoutY="119.0" prefHeight="63.0" prefWidth="642.0" style="-fx-background-radius: 10; -fx-border-color: black; -fx-border-radius: 10; -fx-border-width: 3; -fx-background-color: lime;" text="  LET'S CALCULATE YOUR DAILY CALORIES - ANSWER FOR A TYPICAL DAY : How many grams did you eat these?  " wrapText="true">
+      <Label alignment="CENTER_RIGHT" layoutX="52.0" layoutY="119.0" prefHeight="63.0" prefWidth="642.0" style="-fx-background-radius: 10; -fx-border-color: black; -fx-border-radius: 10; -fx-border-width: 3; -fx-background-color: SteelBlue;" text="  LET'S CALCULATE YOUR DAILY CALORIES - ANSWER FOR A TYPICAL DAY : How many grams did you eat these?  " textFill="#94d4e3" wrapText="true">
          <font>
             <Font name="Cooper Black" size="20.0" />
          </font>

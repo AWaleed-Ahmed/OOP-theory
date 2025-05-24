@@ -9,31 +9,30 @@ import javafx.scene.Scene;
 import javafx.scene.Parent;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
-
 import java.io.IOException;
 
 public class SceneController {
-
+    // Authentication and Core Fields
     private final Authenticator auth;
-
     public SceneController() {
-        this.auth = Main.auth;
+        this.auth = Main.auth;  // Shared authenticator instance
     }
 
-    // User Data Fields
+    // User Profile Data Fields
     @FXML private TextField nameField, ageField, weightField, heightField;
-    public String gender = "";
-    private double weight;
-    private double height;
+    public String gender = "";  // Stores selected gender
+    private double weight;      // User weight in kg
+    private double height;      // User height in cm
 
-    // Gender Handlers
+    // Gender Selection Handlers
     @FXML private void handleMaleGender() { gender = "Male"; }
     @FXML private void handleFemaleGender() { gender = "Female"; }
 
-    // Login & SignUp Scene Switches
+    // Scene Navigation Methods
     public void switchToScene1(ActionEvent event) throws IOException { switchScene(event, "/frontend/SignIn.fxml"); }
     public void switchToScene2(ActionEvent event) throws IOException { switchScene(event, "/frontend/SignUp.fxml"); }
 
+    // Login Validation and Scene Switch
     public void switchToScene3(ActionEvent event) throws IOException {
         Node source = (Node) event.getSource();
         Parent parent = source.getParent();
@@ -49,7 +48,7 @@ public class SceneController {
             auth.verifyUsername(userName);
             auth.verifyPassword(password);
             if (auth.verify()) {
-                switchScene(event, "/frontend/UserData(UI).fxml");
+                switchScene(event, "/frontend/UserData(UI).fxml");  // Successful login
             } else {
                 loginMessage.setText("Invalid username or password!");
             }
@@ -58,6 +57,7 @@ public class SceneController {
         }
     }
 
+    // User Registration Handler
     public void handleSignUp(ActionEvent event) throws IOException {
         Node source = (Node) event.getSource();
         Parent parent = source.getParent();
@@ -70,12 +70,13 @@ public class SceneController {
         try {
             int password = Integer.parseInt(passwordText);
             auth.signup(userName, password);
-            switchToScene1(event);
+            switchToScene1(event);  // Return to login after signup
         } catch (NumberFormatException e) {
             System.out.println("Password must be numeric.");
         }
     }
 
+    // BMI Calculation and Display
     public double bmi2;
     public void switchToScene4(ActionEvent event) throws IOException {
         try {
@@ -119,9 +120,11 @@ public class SceneController {
         }
     }
 
+    // Additional Scene Navigation
     public void switchToScene5(ActionEvent event) throws IOException { switchScene(event, "/frontend/SignUp.fxml"); }
     public void switchToScene6(ActionEvent event) throws IOException { switchScene(event, "/frontend/CalorieCounter.fxml"); }
 
+    // Calorie Calculation and Scene Transition
     public void switchToScene7(ActionEvent event) throws IOException {
         calculateTotalCalories();
 
@@ -142,6 +145,7 @@ public class SceneController {
     public void switchToScene8(ActionEvent event) throws IOException { switchScene(event, "/frontend/RankCalculator.fxml"); }
     public void switchToScene10(ActionEvent event) throws IOException { switchScene(event, "/frontend/FitnessGoals.fxml"); }
 
+    // Generic Scene Switching Utility
     public void switchScene(ActionEvent event, String fxmlFile) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlFile));
@@ -161,6 +165,7 @@ public class SceneController {
         }
     }
 
+    // Calorie Tracking Components
     private final CalorieCalculator calorieCalculator = new CalorieCalculator();
     private double bmi = 22.0;
 
@@ -175,6 +180,7 @@ public class SceneController {
 
     private double totalCaloriesScene1 = 0;
 
+    // Calorie Calculation Logic
     @FXML
     public void calculateTotalCalories() {
         double totalCalories = 0;
@@ -200,6 +206,7 @@ public class SceneController {
         System.out.println("Total Calories in Scene 1: " + totalCalories);
     }
 
+    // Helper Methods
     private int getCaloriesFromInput(TextField amountField, String foodKey) {
         String text = amountField.getText();
         if (text == null || text.isEmpty()) return 0;
@@ -210,7 +217,7 @@ public class SceneController {
         this.bmi = bmi;
     }
 
-
+    // Food Item Management
     @FXML
     public void handleAddFoodItem(ActionEvent event) {
         System.out.println("Add button clicked!");
@@ -252,7 +259,6 @@ public class SceneController {
             String existingTips = tips.getText();
             tips.setText(existingTips + "\n\n✅ Item added successfully!");
 
-
         } catch (NumberFormatException e) {
             tips.setText("Please enter valid numeric values for calories and quantity.");
         } catch (Exception e) {
@@ -261,6 +267,7 @@ public class SceneController {
         }
     }
 
+    // UI Update Methods
     private void updateTotalCaloriesDisplay() {
         double userAddedCalories = calorieCalculator.getTotalCalories();
         double total = totalCaloriesScene1 + userAddedCalories;
@@ -279,20 +286,18 @@ public class SceneController {
         tips.setText(goalAdvice);
     }
 
+    // Data Transfer Between Scenes
     public void receiveCaloriesFromScene1(double calories) {
         this.totalCaloriesScene1 = calories;
 
-        // Show total in the label directly even if no food items added yet in Scene 2
         if (totalCaloriesResultLabel != null) {
             totalCaloriesResultLabel.setText("Total Calories: " + String.format("%.0f", totalCaloriesScene1));
         }
 
-        // Show BMI suggestions if available
         if (this.weight > 0 && this.height > 0) {
             BMI_Calculation_Tips bmiTips = new BMI_Calculation_Tips();
             bmiTips.bmical(this.weight, this.height);
             this.bmi = bmiTips.index();
-
 
             String plan = calorieCalculator.suggestPlanBasedOnBMIAndGoal(this.bmi);
 
@@ -302,11 +307,12 @@ public class SceneController {
         }
     }
 
-
     public void setWeightAndHeight(double weight, double height) {
         this.weight = weight;
         this.height = height;
     }
+
+    // Workout Ranking System
     private Stage stage;
     private Scene scene;
     @FXML private TextField pushupsField, pullupsField, squatsField, burpeesField, lungesField, situpsField;
@@ -336,7 +342,6 @@ public class SceneController {
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
-
     }
 
     private int parseInput(String text) {
@@ -352,4 +357,3 @@ public class SceneController {
         if (suggestionLabel != null) suggestionLabel.setText(suggestion);
     }
 }
-
