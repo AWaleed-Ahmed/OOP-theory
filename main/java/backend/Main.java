@@ -10,9 +10,6 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class Main extends Application {
-//    Application configuration constants
-//    private static final int MAX_USERS          = 50;   // Maximum user capacity
-//    private static final int DEFAULT_USER_COUNT = 5;    // Default test user count
     private static final String USER_FILE = "D:\\for java\\java projects\\main(1)\\users.txt";  // User data storage path
 
     // Shared authentication instance

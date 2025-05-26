@@ -122,6 +122,7 @@ public class SceneController {
         }
     }
 
+
     // Additional Scene Navigation
     public void switchToScene5(ActionEvent event) throws IOException { switchScene(event, "/frontend/SignUp.fxml"); }
     public void switchToScene6(ActionEvent event) throws IOException { switchScene(event, "/frontend/CalorieCounter.fxml"); }
@@ -278,6 +279,7 @@ public class SceneController {
 
         BMI_Calculation_Tips bmiTips = new BMI_Calculation_Tips();
         String goalAdvice = "";
+
         if (bmi2 == 0.0) {
             goalAdvice = "BMI not calculated yet.";
         } else {

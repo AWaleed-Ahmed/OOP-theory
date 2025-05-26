@@ -57,9 +57,10 @@ public class Authenticator {
             }
         }
 
-        if (this.nameIndex == 8) {
+//        if (this.nameIndex == 8)
+//        {
 //            System.out.println("Invalid username ! not found in record");
-        }
+//        }
 
     }
 
