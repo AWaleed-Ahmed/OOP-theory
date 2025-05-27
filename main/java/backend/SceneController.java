@@ -145,28 +145,31 @@ public class SceneController {
         switchToScene8(event);
     }
 
-    public void switchToScene8(ActionEvent event) throws IOException { switchScene(event, "/frontend/RankCalculator.fxml"); }
-    public void switchToScene10(ActionEvent event) throws IOException { switchScene(event, "/frontend/FitnessGoals.fxml"); }
+    // &&&&&&&&&&&&&&&&&&&& updated &&&&&&&&&&&&&&&&&&&&&&&&&&
+//    public void switchToScene8(ActionEvent event) throws IOException { switchScene(event, "/frontend/RankCalculator.fxml"); }
+//    public void switchToScene10(ActionEvent event) throws IOException { switchScene(event, "/frontend/FitnessGoals.fxml"); }
+//
+//    // Generic Scene Switching Utility
+//    public void switchScene(ActionEvent event, String fxmlFile) {
+//        try {
+//            FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlFile));
+//            Parent root = loader.load();
+//            Scene scene = new Scene(root);
+//
+//            if (event == null) {
+//                System.out.println("Event is null! Scene cannot be switched.");
+//                return;
+//            }
+//
+//            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+//            stage.setScene(scene);
+//            stage.show();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//    }
+// &&&&&&&&&&&&&&&&&&&& updated &&&&&&&&&&&&&&&&&&&&&&&&&&
 
-    // Generic Scene Switching Utility
-    public void switchScene(ActionEvent event, String fxmlFile) {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlFile));
-            Parent root = loader.load();
-            Scene scene = new Scene(root);
-
-            if (event == null) {
-                System.out.println("Event is null! Scene cannot be switched.");
-                return;
-            }
-
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            stage.setScene(scene);
-            stage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
 
     // Calorie Tracking Components
     private final CalorieCalculator calorieCalculator = new CalorieCalculator();
