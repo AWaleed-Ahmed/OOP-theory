@@ -44,9 +44,13 @@ public class UserProfileController {
             System.out.printf("BMI: %.2f\nAdvice: %s%n", bmi, advice);
             // Replace with actual scene switch and display result
 
-        } catch (IllegalArgumentException | NumberFormatException e) {
-            showError("Input Error", e.getMessage());
+            // this error needs to be resolved ***************** yahan error lable aaye ga
+        } finally {
+
         }
+//        catch (IllegalArgumentException | NumberFormatException e) {
+//            showError("Input Error", e.getMessage());
+//        }
     }
 
     private void showError(String title, String message) {
