@@ -25,8 +25,8 @@ public class SceneController {
     private double height;      // User height in cm
 
     // Gender Selection Handlers
-    @FXML private void handleMaleGender() { gender = "Male"; }
-    @FXML private void handleFemaleGender() { gender = "Female"; }
+//    @FXML private void handleMaleGender() { gender = "Male"; }
+//    @FXML private void handleFemaleGender() { gender = "Female"; }
 
     // Scene Navigation Methods
     public void switchToScene1(ActionEvent event) throws IOException { switchScene(event, "/frontend/SignIn.fxml"); }
@@ -78,49 +78,49 @@ public class SceneController {
 
     // BMI Calculation and Display
     public double bmi2;
-    public void switchToScene4(ActionEvent event) throws IOException {
-        try {
-            String name = nameField.getText();
-            int age = Integer.parseInt(ageField.getText());
-            this.weight = Double.parseDouble(weightField.getText());
-            this.height = Double.parseDouble(heightField.getText());
-
-            UserData userData = new UserData();
-            userData.setName(name);
-            userData.setAge(age);
-            userData.setGender(gender);
-            userData.setWeight(weight);
-            userData.setHeight(height);
-
-            BMI_Calculation_Tips calc = new BMI_Calculation_Tips();
-            calc.bmical(weight, height);
-            double bmi = calc.index();
-
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/frontend/BMI.fxml"));
-            Parent bmiRoot = loader.load();
-
-            Label bmiLabel = (Label) bmiRoot.lookup("#bmiLabel");
-            Label levelLabel = (Label) bmiRoot.lookup("#levelLabel");
-
-            String level = (bmi < 18.5) ? "Underweight"
-                    : (bmi < 24.9) ? "Normal"
-                    : (bmi < 30) ? "Overweight"
-                    : "Obese";
-
-            if (bmiLabel != null) bmiLabel.setText(String.format("%.2f", bmi));
-            if (levelLabel != null) levelLabel.setText(level);
-
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            stage.setScene(new Scene(bmiRoot));
-            stage.show();
-
-            this.bmi = bmi;
-            bmi2 = bmi;
-
-        } catch (NumberFormatException e) {
-            System.out.println("Please enter valid numeric values.");
-        }
-    }
+//    public void switchToScene4(ActionEvent event) throws IOException {
+//        try {
+//            String name = nameField.getText();
+//            int age = Integer.parseInt(ageField.getText());
+//            this.weight = Double.parseDouble(weightField.getText());
+//            this.height = Double.parseDouble(heightField.getText());
+//
+//            UserData userData = new UserData();
+//            userData.setName(name);
+//            userData.setAge(age);
+//            userData.setGender(gender);
+//            userData.setWeight(weight);
+//            userData.setHeight(height);
+//
+//            BMI_Calculation_Tips calc = new BMI_Calculation_Tips();
+//            calc.bmical(weight, height);
+//            double bmi = calc.index();
+//
+//            FXMLLoader loader = new FXMLLoader(getClass().getResource("/frontend/BMI.fxml"));
+//            Parent bmiRoot = loader.load();
+//
+//            Label bmiLabel = (Label) bmiRoot.lookup("#bmiLabel");
+//            Label levelLabel = (Label) bmiRoot.lookup("#levelLabel");
+//
+//            String level = (bmi < 18.5) ? "Underweight"
+//                    : (bmi < 24.9) ? "Normal"
+//                    : (bmi < 30) ? "Overweight"
+//                    : "Obese";
+//
+//            if (bmiLabel != null) bmiLabel.setText(String.format("%.2f", bmi));
+//            if (levelLabel != null) levelLabel.setText(level);
+//
+//            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+//            stage.setScene(new Scene(bmiRoot));
+//            stage.show();
+//
+//            this.bmi = bmi;
+//            bmi2 = bmi;
+//
+//        } catch (NumberFormatException e) {
+//            System.out.println("Please enter valid numeric values.");
+//        }
+//    }
 
 
     // Additional Scene Navigation
