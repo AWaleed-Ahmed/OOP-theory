@@ -13,7 +13,7 @@
 //import javafx.scene.control.*;
 //import java.io.IOException;
 //public class WorkoutPlan {
-//    // Workout Ranking System
+//    // RankCalculator Ranking System
 //    private Stage stage;
 //    private Scene scene;
 //    @FXML private TextField pushupsField, pullupsField, squatsField, burpeesField, lungesField, situpsField;
@@ -155,3 +155,4 @@
 //        };
 //    }
 //}
+

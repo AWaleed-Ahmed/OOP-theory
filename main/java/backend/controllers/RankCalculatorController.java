@@ -1,7 +1,7 @@
 package backend.controllers;
 
-import backend.models.Workout;
-import backend.services.WorkoutEvaluator;
+import backend.models.RankCalculator;
+import backend.services.RankCalculatorService;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -13,30 +13,30 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class WorkoutController {
+public class RankCalculatorController {
 
-    @FXML private TextField pushupsField, pullupsField, squatsField, burpeesField, lungesField, situpsField;
+    @FXML private TextField pushUpsField, pullUpsField, squatsField, burpeesField, lungesField, sitUpsField;
     @FXML private Label rankLabel, suggestionLabel;
 
     @FXML
     public void switchToScene9(ActionEvent event) throws IOException {
-        Workout workout = new Workout(
-                parseInput(pushupsField.getText()),
-                parseInput(pullupsField.getText()),
+        RankCalculator rankCalculator = new RankCalculator(
+                parseInput(pushUpsField.getText()),
+                parseInput(pullUpsField.getText()),
                 parseInput(squatsField.getText()),
                 parseInput(burpeesField.getText()),
                 parseInput(lungesField.getText()),
-                parseInput(situpsField.getText())
+                parseInput(sitUpsField.getText())
         );
 
-        int totalReps = workout.getTotalReps();
-        String rank = WorkoutEvaluator.getRank(totalReps);
-        String suggestion = WorkoutEvaluator.getSuggestion(rank);
+        int totalReps = rankCalculator.getTotalReps();
+        String rank = RankCalculatorService.getRank(totalReps);
+        String suggestion = RankCalculatorService.getSuggestion(rank);
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/frontend/Rank+Suggestions.fxml"));
         Parent root = loader.load();
 
-        WorkoutController controller = loader.getController();
+        RankCalculatorController controller = loader.getController();
         controller.displayRankAndSuggestion(rank, suggestion);
 
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();

@@ -317,11 +317,11 @@ public class SceneController {
     }
 // ++++++++++++++++++++++++++++++++++++++
 //    switchToScene9();
+//
+//    WorkoutPlan workoutPlan = new WorkoutPlan();
+//            workoutPlan.switchToScene9(/* pass action event /* );
 
-    WorkoutPlan workoutPlan = new WorkoutPlan();
-            workoutPlan.switchToScene9(/* pass action event /* );
-
-//    // Workout Ranking System
+//    // RankCalculator Ranking System
 //    private Stage stage;
 //    private Scene scene;
 //    @FXML private TextField pushupsField, pullupsField, squatsField, burpeesField, lungesField, situpsField;
