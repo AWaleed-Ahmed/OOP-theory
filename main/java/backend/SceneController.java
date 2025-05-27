@@ -315,49 +315,54 @@ public class SceneController {
         this.weight = weight;
         this.height = height;
     }
+// ++++++++++++++++++++++++++++++++++++++
+//    switchToScene9();
 
-    // Workout Ranking System
-    private Stage stage;
-    private Scene scene;
-    @FXML private TextField pushupsField, pullupsField, squatsField, burpeesField, lungesField, situpsField;
-    @FXML private Label rankLabel, suggestionLabel;
+    WorkoutPlan workoutPlan = new WorkoutPlan();
+            workoutPlan.switchToScene9(/* pass action event /* );
 
-    @FXML
-    public void switchToScene9(ActionEvent event) throws IOException {
-        int pushups = parseInput(pushupsField.getText());
-        int pullups = parseInput(pullupsField.getText());
-        int squats = parseInput(squatsField.getText());
-        int burpees = parseInput(burpeesField.getText());
-        int lunges = parseInput(lungesField.getText());
-        int situps = parseInput(situpsField.getText());
-
-        int totalReps = pushups + pullups + squats + burpees + lunges + situps;
-
-        String rank = WorkoutPlan.getRank(totalReps);
-        String suggestion = WorkoutPlan.getSuggestion(rank);
-
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/frontend/Rank+Suggestions.fxml"));
-        Parent root = loader.load();
-
-        SceneController controller = loader.getController();
-        controller.setRankAndSuggestion(rank, suggestion);
-
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
-
-    private int parseInput(String text) {
-        try {
-            return Integer.parseInt(text.trim());
-        } catch (NumberFormatException e) {
-            return 0;
-        }
-    }
-
-    public void setRankAndSuggestion(String rank, String suggestion) {
-        if (rankLabel != null) rankLabel.setText("Rank: " + rank);
-        if (suggestionLabel != null) suggestionLabel.setText(suggestion);
-    }
+//    // Workout Ranking System
+//    private Stage stage;
+//    private Scene scene;
+//    @FXML private TextField pushupsField, pullupsField, squatsField, burpeesField, lungesField, situpsField;
+//    @FXML private Label rankLabel, suggestionLabel;
+//
+//    @FXML
+//    public void switchToScene9(ActionEvent event) throws IOException {
+//        int pushups = parseInput(pushupsField.getText());
+//        int pullups = parseInput(pullupsField.getText());
+//        int squats = parseInput(squatsField.getText());
+//        int burpees = parseInput(burpeesField.getText());
+//        int lunges = parseInput(lungesField.getText());
+//        int situps = parseInput(situpsField.getText());
+//
+//        int totalReps = pushups + pullups + squats + burpees + lunges + situps;
+//
+//        String rank = WorkoutPlan.getRank(totalReps);
+//        String suggestion = WorkoutPlan.getSuggestion(rank);
+//
+//        FXMLLoader loader = new FXMLLoader(getClass().getResource("/frontend/Rank+Suggestions.fxml"));
+//        Parent root = loader.load();
+//
+//        SceneController controller = loader.getController();
+//        controller.setRankAndSuggestion(rank, suggestion);
+//
+//        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+//        scene = new Scene(root);
+//        stage.setScene(scene);
+//        stage.show();
+//    }
+//
+//    private int parseInput(String text) {
+//        try {
+//            return Integer.parseInt(text.trim());
+//        } catch (NumberFormatException e) {
+//            return 0;
+//        }
+//    }
+//
+//    public void setRankAndSuggestion(String rank, String suggestion) {
+//        if (rankLabel != null) rankLabel.setText("Rank: " + rank);
+//        if (suggestionLabel != null) suggestionLabel.setText(suggestion);
+//    }
 }
