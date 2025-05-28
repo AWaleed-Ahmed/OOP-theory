@@ -7,7 +7,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class Authenticator {
+public class Authenticator_old {
     String[] username = new String[50];
     int[] password = new int[50];
     int userCount = 0;

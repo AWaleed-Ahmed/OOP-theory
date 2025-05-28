@@ -13,7 +13,7 @@ import java.io.IOException;
 
 public class SceneController {
     // Authentication and Core Fields
-    private final Authenticator auth;
+    private final Authenticator_old auth;
     public SceneController() {
         this.auth = Main.auth;  // Shared authenticator instance
     }
@@ -280,7 +280,7 @@ public class SceneController {
 
         totalCaloriesResultLabel.setText("Total Calories: " + String.format("%.0f", total));
 
-        BMI_Calculation_Tips bmiTips = new BMI_Calculation_Tips();
+        BMI_Calculation_Tips_old bmiTips = new BMI_Calculation_Tips_old();
         String goalAdvice = "";
 
         if (bmi2 == 0.0) {
@@ -302,7 +302,7 @@ public class SceneController {
         }
 
         if (this.weight > 0 && this.height > 0) {
-            BMI_Calculation_Tips bmiTips = new BMI_Calculation_Tips();
+            BMI_Calculation_Tips_old bmiTips = new BMI_Calculation_Tips_old();
             bmiTips.bmical(this.weight, this.height);
             this.bmi = bmiTips.index();
 

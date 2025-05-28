@@ -2,7 +2,7 @@ package backend;
 
 import java.net.URL;
 import java.util.Objects;
-import backend.models.Authenticator;
+import backend.models.Authenticator_old;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -13,7 +13,7 @@ public class Main extends Application {
     private static final String USER_FILE = "D:\\for java\\java projects\\main(1)\\users.txt";  // User data storage path
 
     // Shared authentication instance
-    static Authenticator auth = new Authenticator();
+    static Authenticator_old auth = new Authenticator_old();
 
     // JavaFX application entry point
     public void start(Stage stage) throws Exception {

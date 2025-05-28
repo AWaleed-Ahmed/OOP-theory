@@ -1,6 +1,6 @@
 package backend.models;
 
-public class BMI_Calculation_Tips {
+public class BMI_Calculation_Tips_old {
     private double bmi;
     private double weight;
     private double height;
