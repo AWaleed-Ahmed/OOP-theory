@@ -1,4 +1,4 @@
-package backend;
+package backend.controllers;
 
 import backend.models.BMICalculator;
 import backend.models.UserProfile;
