@@ -26,7 +26,7 @@ public class AuthenticatorController {
 
         if (authenticator.login(username, password)) {
             loginMessage.setText("Login successful!");
-            switchScene("/frontend/CalorieCalculator.fxml");
+            switchScene("/frontend/UserProfileView.fxml");
         } else {
             loginMessage.setText("Invalid credentials.");
         }
@@ -34,7 +34,7 @@ public class AuthenticatorController {
 
     @FXML
     public void switchToScene5(ActionEvent event) {
-        switchScene("/frontend/SignUp.fxml");
+        switchScene("/frontend/RegistrationView.fxml");
     }
 
     @FXML
@@ -45,7 +45,7 @@ public class AuthenticatorController {
         if (!username.isEmpty() && !password.isEmpty()) {
             authenticator.signup(username, password);
             loginMessage.setText("Sign up successful. Please log in.");
-            switchScene("/frontend/authenticator.fxml");
+            switchScene("/frontend/LoginView.fxml");
         } else {
             loginMessage.setText("Username or password cannot be empty.");
         }
