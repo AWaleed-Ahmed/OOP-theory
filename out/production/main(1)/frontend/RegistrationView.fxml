@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="501.0" prefWidth="984.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="backend.SceneController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="501.0" prefWidth="984.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="backend.controllers.AuthenticatorController">
    <children>
       <ImageView fitHeight="947.0" fitWidth="520.0" layoutX="197.0" layoutY="-223.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
          <image>
@@ -28,11 +28,11 @@
       <Button layoutX="421.0" layoutY="381.0" mnemonicParsing="false" onAction="#handleSignUp" onMouseClicked="#switchToScene3" prefHeight="35.0" prefWidth="87.0" text="Done" />
       <Label layoutX="63.0" layoutY="273.0" text="PASSWORD">
          <font>
-            <Font name="Century Gothic Bold" size="14.0" />
+            <Font name="Century Gothic Bold" size="16.0" />
          </font></Label>
       <Label layoutX="61.0" layoutY="165.0" text="USERNAME or EMAIL ADDRESS">
          <font>
-            <Font name="Century Gothic Bold" size="14.0" />
+            <Font name="Century Gothic Bold" size="16.0" />
          </font></Label>
       <Label layoutX="448.0" layoutY="37.0" text="Yesss," />
       <Label layoutX="448.0" layoutY="52.0" text="new member" />
@@ -42,9 +42,9 @@
             <Image url="@../images/SignUpQuote.jpg" />
          </image>
       </ImageView>
-      <Label layoutX="137.0" layoutY="37.0" prefHeight="50.0" prefWidth="141.0" text="SIGN UP" underline="true">
+      <Label layoutX="63.0" layoutY="63.0" prefHeight="50.0" prefWidth="190.0" text="SIGN UP" textFill="#7b4016">
          <font>
-            <Font name="Cooper Black" size="30.0" />
+            <Font name="Cooper Black" size="40.0" />
          </font>
       </Label>
       <ImageView fitHeight="236.0" fitWidth="239.0" layoutX="482.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">

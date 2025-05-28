@@ -1,19 +1,19 @@
-package backend.models;
-
-public class BMI_Calculation_Tips_old {
-    private double bmi;
-    private double weight;
-    private double height;
-
-    public void bmical(double weight, double height) {
-        this.weight = weight;
-        this.height = height;
-    }
-
-    public double index() {
-        bmi = (weight * 10000.0d) / Math.pow(height, 2.0d);
-        return bmi;
-    }
+//package backend.models;
+//
+//public class BMI_Calculation_Tips_old {
+//    private double bmi;
+//    private double weight;
+//    private double height;
+//
+//    public void bmical(double weight, double height) {
+//        this.weight = weight;
+//        this.height = height;
+//    }
+//
+//    public double index() {
+//        bmi = (weight * 10000.0d) / Math.pow(height, 2.0d);
+//        return bmi;
+//    }
 
     // to be edited
 //    public String getTips() {
@@ -49,4 +49,4 @@ public class BMI_Calculation_Tips_old {
 //
 //        return tips.toString();
 //    }
-}
+//}
