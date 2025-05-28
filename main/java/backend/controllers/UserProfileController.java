@@ -43,15 +43,10 @@ public class UserProfileController {
             String advice = service.getHealthAdvice(bmi);
 
             System.out.printf("BMICalculator: %.2f\nAdvice: %s%n", bmi, advice);
-            // Replace with actual scene switch and display result
 
-            // this error needs to be resolved ***************** yahan error lable aaye ga
-        } finally {
-
+        } catch (IllegalArgumentException e) {
+            error.setText("INVALID INPUT: " + e.getMessage());
         }
-//        catch (IllegalArgumentException | NumberFormatException e) {
-//            showError("Input Error", e.getMessage());
-//        }
     }
 
     private void showError(String title, String message) {
