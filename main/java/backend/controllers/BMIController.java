@@ -38,7 +38,7 @@ public class BMIController {
     @FXML
     private void switchToScene10(ActionEvent event) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/frontend/NextScene.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/frontend/StandardCalorieCounterView.fxml"));
             Scene nextScene = new Scene(loader.load());
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.setScene(nextScene);
