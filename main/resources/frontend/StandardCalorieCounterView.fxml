@@ -17,20 +17,26 @@
       </ImageView>
 
       <!-- Food name TextFields (read-only) -->
-      <TextField fx:id="rice" editable="false" focusTraversable="false" layoutX="52.0" layoutY="212.0" prefHeight="50.0" prefWidth="139.0" style="-fx-background-color: white; -fx-font-family: 'Comic Sans MS'; -fx-font-weight: bold; -fx-font-size: 18px;" text="Rice" />
-      <TextField fx:id="chicken" editable="false" focusTraversable="false" layoutX="52.0" layoutY="280.0" prefHeight="50.0" prefWidth="139.0" style="-fx-background-color: white; -fx-font-family: 'Comic Sans MS'; -fx-font-weight: bold; -fx-font-size: 18px;" text="Chicken" />
-      <TextField fx:id="beef" editable="false" focusTraversable="false" layoutX="52.0" layoutY="349.0" prefHeight="50.0" prefWidth="139.0" style="-fx-background-color: white; -fx-font-family: 'Comic Sans MS'; -fx-font-weight: bold; -fx-font-size: 18px;" text="Beef" />
-      <TextField fx:id="wheatgrains" editable="false" focusTraversable="false" layoutX="52.0" layoutY="428.0" prefHeight="50.0" prefWidth="139.0" style="-fx-background-color: white; -fx-font-family: 'Comic Sans MS'; -fx-font-weight: bold; -fx-font-size: 18px;" text="Wheatgrains" />
+      <TextField fx:id="rice" alignment="CENTER" editable="false" focusTraversable="false" layoutX="52.0" layoutY="212.0" prefHeight="50.0" prefWidth="139.0" style="-fx-background-color: white; -fx-font-family: 'Comic Sans MS'; -fx-font-weight: bold; -fx-font-size: 18px;" text="Rice" />
+      <TextField fx:id="chicken" alignment="CENTER" editable="false" focusTraversable="false" layoutX="52.0" layoutY="280.0" prefHeight="50.0" prefWidth="139.0" style="-fx-background-color: white; -fx-font-family: 'Comic Sans MS'; -fx-font-weight: bold; -fx-font-size: 18px;" text="Chicken" />
+      <TextField fx:id="beef" alignment="CENTER" editable="false" focusTraversable="false" layoutX="52.0" layoutY="349.0" prefHeight="50.0" prefWidth="139.0" style="-fx-background-color: white; -fx-font-family: 'Comic Sans MS'; -fx-font-weight: bold; -fx-font-size: 18px;" text="Beef" />
+      <TextField fx:id="wheatgrains" alignment="CENTER" editable="false" focusTraversable="false" layoutX="52.0" layoutY="428.0" prefHeight="50.0" prefWidth="139.0" style="-fx-background-color: white; -fx-font-family: 'Comic Sans MS'; -fx-font-weight: bold; -fx-font-size: 18px;" text="Wheatgrains" />
 
-      <TextField fx:id="milk" editable="false" focusTraversable="false" layoutX="340.0" layoutY="212.0" prefHeight="50.0" prefWidth="139.0" style="-fx-background-color: white; -fx-font-family: 'Comic Sans MS'; -fx-font-weight: bold; -fx-font-size: 18px;" text="Milk" />
-      <TextField fx:id="chickpeas" editable="false" focusTraversable="false" layoutX="340.0" layoutY="280.0" prefHeight="50.0" prefWidth="139.0" style="-fx-background-color: white; -fx-font-family: 'Comic Sans MS'; -fx-font-weight: bold; -fx-font-size: 18px;" text="Chickpeas" />
-      <TextField fx:id="kidneyBeans" editable="false" focusTraversable="false" layoutX="340.0" layoutY="349.0" prefHeight="50.0" prefWidth="139.0" style="-fx-background-color: white; -fx-font-family: 'Comic Sans MS'; -fx-font-weight: bold; -fx-font-size: 18px;" text="Kidney beans" />
-      <TextField fx:id="banana" editable="false" focusTraversable="false" layoutX="340.0" layoutY="419.0" prefHeight="50.0" prefWidth="139.0" style="-fx-background-color: white; -fx-font-family: 'Comic Sans MS'; -fx-font-weight: bold; -fx-font-size: 18px;" text="Banana " />
+      <TextField fx:id="milk" alignment="CENTER" editable="false" focusTraversable="false" layoutX="340.0" layoutY="212.0" prefHeight="50.0" prefWidth="139.0" style="-fx-background-color: white; -fx-font-family: 'Comic Sans MS'; -fx-font-weight: bold; -fx-font-size: 18px;" text="Milk" />
+      <TextField fx:id="chickpeas" alignment="CENTER" editable="false" focusTraversable="false" layoutX="340.0" layoutY="280.0" prefHeight="50.0" prefWidth="139.0" style="-fx-background-color: white; -fx-font-family: 'Comic Sans MS'; -fx-font-weight: bold; -fx-font-size: 18px;" text="Chickpeas" />
+      <TextField fx:id="kidneyBeans" alignment="CENTER" editable="false" focusTraversable="false" layoutX="340.0" layoutY="349.0" prefHeight="50.0" prefWidth="139.0" style="-fx-background-color: white; -fx-font-family: 'Comic Sans MS'; -fx-font-weight: bold; -fx-font-size: 18px;" text="Kidney beans" />
+      <TextField fx:id="banana" alignment="CENTER" editable="false" focusTraversable="false" layoutX="340.0" layoutY="419.0" prefHeight="50.0" prefWidth="139.0" style="-fx-background-color: white; -fx-font-family: 'Comic Sans MS'; -fx-font-weight: bold; -fx-font-size: 18px;" text="Banana " />
 
-      <TextField fx:id="egg" editable="false" focusTraversable="false" layoutX="646.0" layoutY="207.0" prefHeight="50.0" prefWidth="139.0" style="-fx-background-color: white; -fx-font-family: 'Comic Sans MS'; -fx-font-weight: bold; -fx-font-size: 18px;" text="Egg" />
-      <TextField fx:id="mutton" editable="false" focusTraversable="false" layoutX="646.0" layoutY="280.0" prefHeight="50.0" prefWidth="139.0" style="-fx-background-color: white; -fx-font-family: 'Comic Sans MS'; -fx-font-weight: bold; -fx-font-size: 18px;" text="Mutton" />
-      <TextField fx:id="oats" editable="false" focusTraversable="false" layoutX="646.0" layoutY="349.0" prefHeight="50.0" prefWidth="139.0" style="-fx-background-color: white; -fx-font-family: 'Comic Sans MS'; -fx-font-weight: bold; -fx-font-size: 18px;" text="Oats" />
-      <TextField fx:id="peanutButter" editable="false" focusTraversable="false" layoutX="636.0" layoutY="418.0" prefHeight="50.0" prefWidth="149.0" style="-fx-background-color: white; -fx-font-family: 'Comic Sans MS'; -fx-font-weight: bold; -fx-font-size: 18px;" text="Peanut butter" />
+      <TextField fx:id="egg" alignment="CENTER" editable="false" focusTraversable="false" layoutX="624.0" layoutY="207.0" prefHeight="50.0" prefWidth="139.0" style="-fx-background-color: white; -fx-font-family: 'Comic Sans MS'; -fx-font-weight: bold; -fx-font-size: 18px;" text="Egg">
+         <font>
+            <Font name="Comic Sans MS" size="12.0" />
+         </font></TextField>
+      <TextField fx:id="mutton" alignment="CENTER" editable="false" focusTraversable="false" layoutX="624.0" layoutY="280.0" prefHeight="50.0" prefWidth="139.0" style="-fx-background-color: white; -fx-font-family: 'Comic Sans MS'; -fx-font-weight: bold; -fx-font-size: 18px;" text="Mutton">
+         <font>
+            <Font name="Comic Sans MS" size="12.0" />
+         </font></TextField>
+      <TextField fx:id="oats" alignment="CENTER" editable="false" focusTraversable="false" layoutX="624.0" layoutY="349.0" prefHeight="50.0" prefWidth="139.0" style="-fx-background-color: white; -fx-font-family: 'Comic Sans MS'; -fx-font-weight: bold; -fx-font-size: 18px;" text="Oats" />
+      <TextField fx:id="peanutButter" alignment="CENTER" editable="false" focusTraversable="false" layoutX="625.0" layoutY="418.0" prefHeight="50.0" prefWidth="139.0" style="-fx-background-color: white; -fx-font-family: 'Comic Sans MS'; -fx-font-weight: bold; -fx-font-size: 18px;" text="Peanut butter" />
 
       <!-- Amount TextFields (editable) -->
       <TextField fx:id="riceAmount" layoutX="213.0" layoutY="229.0" prefHeight="22.0" prefWidth="40.0" promptText="0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 2; -fx-alignment: center;" />
@@ -43,31 +49,31 @@
       <TextField fx:id="kidneyBeansAmount" layoutX="510.0" layoutY="362.0" prefHeight="22.0" prefWidth="40.0" promptText="0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 2; -fx-alignment: center;" />
       <TextField fx:id="bananaAmount" layoutX="510.0" layoutY="432.0" prefHeight="22.0" prefWidth="40.0" promptText="0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 2; -fx-alignment: center;" />
 
-      <TextField fx:id="eggAmount" layoutX="809.0" layoutY="220.0" prefHeight="22.0" prefWidth="40.0" promptText="0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 2; -fx-alignment: center;" />
-      <TextField fx:id="muttonAmount" layoutX="809.0" layoutY="293.0" prefHeight="22.0" prefWidth="40.0" promptText="0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 2; -fx-alignment: center;" />
-      <TextField fx:id="oatsAmount" layoutX="809.0" layoutY="362.0" prefHeight="22.0" prefWidth="40.0" promptText="0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 2; -fx-alignment: center;" />
-      <TextField fx:id="peanutButterAmount" layoutX="809.0" layoutY="432.0" prefHeight="22.0" prefWidth="40.0" promptText="0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 2; -fx-alignment: center;" />
+      <TextField fx:id="eggAmount" layoutX="787.0" layoutY="220.0" prefHeight="22.0" prefWidth="40.0" promptText="0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 2; -fx-alignment: center;" />
+      <TextField fx:id="muttonAmount" layoutX="787.0" layoutY="293.0" prefHeight="22.0" prefWidth="40.0" promptText="0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 2; -fx-alignment: center;" />
+      <TextField fx:id="oatsAmount" layoutX="787.0" layoutY="362.0" prefHeight="22.0" prefWidth="40.0" promptText="0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 2; -fx-alignment: center;" />
+      <TextField fx:id="peanutButterAmount" layoutX="787.0" layoutY="432.0" prefHeight="22.0" prefWidth="40.0" promptText="0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 2; -fx-alignment: center;" />
 
-      <Label layoutX="233.0" layoutY="30.0" prefHeight="50.0" prefWidth="507.0" style="-fx-background-color: DarkTurquoise; -fx-background-radius: 10; -fx-border-color: black; -fx-border-radius: 10; -fx-border-width: 3;" text=" CALORIE CALCULATOR    " textFill="#24539c">
+      <Label layoutX="198.0" layoutY="30.0" prefHeight="50.0" prefWidth="507.0" style="-fx-background-color: DarkTurquoise; -fx-background-radius: 10; -fx-border-color: black; -fx-border-radius: 10; -fx-border-width: 3;" text=" CALORIE CALCULATOR    " textFill="#004561">
          <font>
-            <Font name="Cooper Black" size="36.0" />
+            <Font name="Comic Sans MS Bold" size="36.0" />
          </font>
       </Label>
-      <Button fx:id="othersButton" layoutX="837.0" layoutY="478.0" mnemonicParsing="false" onAction="#switchToScene7" prefHeight="38.0" prefWidth="87.0" text="others">
+      <Button fx:id="othersButton" layoutX="837.0" layoutY="481.0" mnemonicParsing="false" onAction="#switchToScene7" prefHeight="38.0" prefWidth="87.0" text="others">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
 
-      <ImageView fitHeight="184.0" fitWidth="189.0" layoutX="660.0" layoutY="-22.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="204.0" fitWidth="206.0" layoutX="602.0" layoutY="-25.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/ChillPanda-Photoroom.png" />
          </image>
       </ImageView>
 
-      <Label alignment="CENTER_RIGHT" layoutX="52.0" layoutY="119.0" prefHeight="63.0" prefWidth="642.0" style="-fx-background-radius: 10; -fx-border-color: black; -fx-border-radius: 10; -fx-border-width: 3; -fx-background-color: SteelBlue;" text="  LET'S CALCULATE YOUR DAILY CALORIES - ANSWER FOR A TYPICAL DAY : How many grams did you eat these?  " textFill="#94d4e3" wrapText="true">
+      <Label alignment="CENTER" layoutX="80.0" layoutY="109.0" prefHeight="58.0" prefWidth="507.0" style="-fx-background-radius: 10; -fx-border-color: black; -fx-border-radius: 10; -fx-border-width: 3; -fx-background-color: DarkTurquoise;" text="  LET'S CALCULATE YOUR DAILY CALORIES - ANSWER FOR A TYPICAL DAY : How many grams did you eat these?  " textAlignment="CENTER" textFill="#034c59" wrapText="true">
          <font>
-            <Font name="Cooper Black" size="20.0" />
+            <Font name="Comic Sans MS Bold" size="16.0" />
          </font>
       </Label>
    </children>

@@ -57,29 +57,29 @@
             <Font name="Cooper Black" size="10.0" />
          </font>
       </Label>
-      <ImageView fitHeight="213.0" fitWidth="207.0" layoutX="791.0" layoutY="227.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="234.0" fitWidth="223.0" layoutX="743.0" layoutY="227.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/eatingNoodlesPanda.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="232.0" fitWidth="240.0" layoutX="636.0" layoutY="215.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="262.0" fitWidth="265.0" layoutX="577.0" layoutY="208.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/drinkingPanda.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="350.0" fitWidth="349.0" layoutX="608.0" layoutY="-12.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@/images/v1018-elements-006-Photoroom.png" />
-         </image>
-      </ImageView>
-      <Button layoutX="147.0" layoutY="374.0" mnemonicParsing="false" onAction="#handleAddFoodItem" prefHeight="35.0" prefWidth="240.0" style="-fx-border-color: black;" text="Add Item">
+      <Button layoutX="246.0" layoutY="373.0" mnemonicParsing="false" onAction="#handleAddFoodItem" prefHeight="35.0" prefWidth="98.0" style="-fx-border-color: black;" text="Add Item">
          <font>
             <Font name="Cooper Black" size="14.0" />
          </font>
       </Button>
-      <Label fx:id="tips" layoutX="725.0" layoutY="92.0" prefHeight="126.0" prefWidth="184.0" text="text" wrapText="true">
+      <ImageView fitHeight="295.0" fitWidth="293.0" layoutX="606.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/v1018-elements-006-Photoroom.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="requiredCalorieLable" layoutX="656.0" layoutY="82.0" prefHeight="109.0" prefWidth="174.0" textAlignment="CENTER" textFill="#0f7060" wrapText="true">
          <font>
-            <Font name="Comic Sans MS" size="14.0" />
+            <Font name="Comic Sans MS" size="17.0" />
          </font>
       </Label>
    </children>

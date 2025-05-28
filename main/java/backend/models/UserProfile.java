@@ -26,7 +26,7 @@ public class UserProfile {
     }
 
     public void setAge(int age) {
-        if (age >= 2) {
+        if (age >= 13) {
             this.age = age;
         } else {
             throw new IllegalArgumentException("Invalid age.");
@@ -50,7 +50,7 @@ public class UserProfile {
     }
 
     public void setWeight(double weight) {
-        if (weight > 0) {
+        if (weight >= 30 && weight <= 200) {
             this.weight = weight;
         } else {
             throw new IllegalArgumentException("Invalid weight.");
@@ -62,7 +62,7 @@ public class UserProfile {
     }
 
     public void setHeight(double height) {
-        if (height > 0) {
+        if (height >= 120 && height <= 250) {
             this.height = height;
         } else {
             throw new IllegalArgumentException("Invalid height.");
