@@ -15,7 +15,7 @@
 //        Scanner in = new Scanner(System.in);
 //        System.out.println("Do you want a diet plan? (cut/maintain/bulk)");
 //        String goal = in.next().toLowerCase();
-//        System.out.println("\n Based on your goal and BMI (" + bmi + "), here’s your diet suggestion:\n");
+//        System.out.println("\n Based on your goal and BMICalculator (" + bmi + "), here’s your diet suggestion:\n");
 //        switch (goal) {
 //            case "cut":
 //                System.out.println("➤ Lower your intake by 500 kcal/day.\n➤ Focus on lean protein, veggies, and whole grains.");

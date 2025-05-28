@@ -71,17 +71,17 @@ public class CalorieCalculator {
         String bmiTip;
         String goal = selectedGoal != null ? selectedGoal : "";
 
-        // BMI-based tip
+        // BMICalculator-based tip
         if (bmi < 18.5) {
-            bmiTip = "🌱 Skinny Fuel (BMI <18.5)\nEat big, lift heavy, sleep tight - 500 extra calories = 1lb/week gains.";
+            bmiTip = "🌱 Skinny Fuel (BMICalculator <18.5)\nEat big, lift heavy, sleep tight - 500 extra calories = 1lb/week gains.";
         } else if (bmi < 25) {
-            bmiTip = "⚡️ Prime Physique (BMI 18.5-25)\nEat smart, train sharp, stay balanced - maintenance is your playground.";
+            bmiTip = "⚡️ Prime Physique (BMICalculator 18.5-25)\nEat smart, train sharp, stay balanced - maintenance is your playground.";
         } else if (bmi < 30) {
-            bmiTip = "✂️ Cut Crew (BMI 25-30)\nLess junk, more iron - 300 deficit + 4x sweat = 1lb fat loss/week.";
+            bmiTip = "✂️ Cut Crew (BMICalculator 25-30)\nLess junk, more iron - 300 deficit + 4x sweat = 1lb fat loss/week.";
         } else if (bmi < 35) {
-            bmiTip = "🏔️ Heavy Hitters (BMI 30-35)\nSwap soda for water, walk daily, protein first - 5% body change in 12 weeks.";
+            bmiTip = "🏔️ Heavy Hitters (BMICalculator 30-35)\nSwap soda for water, walk daily, protein first - 5% body change in 12 weeks.";
         } else {
-            bmiTip = "💥 Transform Tier (BMI 35+)\nSmall wins stack up - 10min daily movement + veggie swaps = 1% body change/month.";
+            bmiTip = "💥 Transform Tier (BMICalculator 35+)\nSmall wins stack up - 10min daily movement + veggie swaps = 1% body change/month.";
         }
 
         // Append goal-specific advice
@@ -94,7 +94,7 @@ public class CalorieCalculator {
             default -> "Please select a valid goal.";
         };
 
-        return "Your BMI: " + bmi + "\n\n" + bmiTip + "\n\n" + "Goal-based advice:\n" + goalAdvice;
+        return "Your BMICalculator: " + bmi + "\n\n" + bmiTip + "\n\n" + "Goal-based advice:\n" + goalAdvice;
     }
 
     // Static method for SceneController to use calorie values easily
