@@ -15,25 +15,25 @@ import java.io.IOException;
 
 public class RankCalculatorController {
 
-    @FXML private TextField pushUpsField, pullUpsField, squatsField, burpeesField, lungesField, sitUpsField;
+    @FXML private TextField pushupsField, pullupsField, squatsField, burpeesField, lungesField, situpsField;
     @FXML private Label rankLabel, suggestionLabel;
 
     @FXML
     public void switchToScene9(ActionEvent event) throws IOException {
         RankCalculator rankCalculator = new RankCalculator(
-                parseInput(pushUpsField.getText()),
-                parseInput(pullUpsField.getText()),
+                parseInput(pushupsField.getText()),
+                parseInput(pullupsField.getText()),
                 parseInput(squatsField.getText()),
                 parseInput(burpeesField.getText()),
                 parseInput(lungesField.getText()),
-                parseInput(sitUpsField.getText())
+                parseInput(situpsField.getText())
         );
 
         int totalReps = rankCalculator.getTotalReps();
         String rank = RankCalculatorService.getRank(totalReps);
         String suggestion = RankCalculatorService.getSuggestion(rank);
 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/frontend/Rank+Suggestions.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/frontend/WorkoutSuggestions.fxml"));
         Parent root = loader.load();
 
         RankCalculatorController controller = loader.getController();
