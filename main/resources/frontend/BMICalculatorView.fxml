@@ -8,8 +8,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<StackPane maxHeight="Infinity" maxWidth="Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="477.0" prefWidth="938.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="backend.BMISceneController"
->
+<StackPane maxHeight="Infinity" maxWidth="Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="477.0" prefWidth="938.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="backend.BMISceneController">
 
    <children>
       <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="477.0" prefWidth="954.0">
@@ -66,21 +65,21 @@
             </ImageView>
 
             <!-- Right Side Content -->
-            <ImageView fitHeight="216.0" fitWidth="213.0" layoutX="705.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="236.0" fitWidth="238.0" layoutX="695.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/GreetingByePanda-Photoroom.png" />
                </image>
             </ImageView>
 
-            <ImageView fitHeight="303.0" fitWidth="327.0" layoutX="550.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="295.0" fitWidth="293.0" layoutX="558.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/v1018-elements-006-Photoroom.png" />
                </image>
             </ImageView>
 
-            <Label layoutX="622.0" layoutY="95.0" prefHeight="92.0" prefWidth="142.0" textFill="#0f7060" wrapText="true">
+            <Label layoutX="607.0" layoutY="70.0" prefHeight="109.0" prefWidth="174.0" text="&quot;Don’t chase numbers, chase sunsets, steps, and good snacks.&quot; 🌅🍿" textAlignment="CENTER" textFill="#0f7060" wrapText="true">
                <font>
-                  <Font name="Comic Sans MS" size="16.0" />
+                  <Font name="Comic Sans MS" size="17.0" />
                </font>
             </Label>
 
