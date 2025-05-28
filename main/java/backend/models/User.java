@@ -1,19 +1,14 @@
 package backend.models;
 
 public class User {
-    private String username;
-    private int password;
+    private final String username;
+    private final String password;
 
-    public User(String username, int password) {
+    public User(String username, String password) {
         this.username = username;
         this.password = password;
     }
 
-    public String getUsername() {
-        return username;
-    }
-
-    public int getPassword() {
-        return password;
-    }
+    public String getUsername() { return username; }
+    public String getPassword() { return password; }
 }
