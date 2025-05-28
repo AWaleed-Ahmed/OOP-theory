@@ -16,7 +16,7 @@
       </ImageView>
       <ImageView fitHeight="421.0" fitWidth="615.0" layoutX="195.0" layoutY="39.0" opacity="0.95" pickOnBounds="true" preserveRatio="true" rotate="180.0">
          <image>
-            <Image url="@../../../../../OneDrive/Documents/BlueBackground1.jpg" />
+            <Image url="@../images/BlueBackground1.jpg" />
          </image>
       </ImageView>
       <Label layoutX="242.0" layoutY="43.0" prefHeight="42.0" prefWidth="514.0" text="So what's your fitness goal?" textFill="#1f9cc9" underline="true">
