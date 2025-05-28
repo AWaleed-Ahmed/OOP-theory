@@ -14,6 +14,7 @@ public class UserProfileController {
     @FXML private TextField heightField;
     @FXML private Button maleButton;
     @FXML private Button femaleButton;
+    @FXML private Label error;
 
     private String selectedGender;
     private final UserProfileService service = new UserProfileService();

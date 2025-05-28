@@ -4,8 +4,8 @@ public class UserProfile {
     private String name;
     private int age;
     private String gender;
-    private double weight; // in kg
-    private double height; // in cm
+    private double weight;
+    private double height;
 
     public UserProfile() {}
 
@@ -17,7 +17,7 @@ public class UserProfile {
         if (name != null && name.trim().matches("[a-zA-Z ]+")) {
             this.name = name.trim();
         } else {
-            throw new IllegalArgumentException("Invalid name.");
+            throw new IllegalArgumentException("Invalid name");
         }
     }
 
@@ -29,7 +29,7 @@ public class UserProfile {
         if (age >= 13) {
             this.age = age;
         } else {
-            throw new IllegalArgumentException("Invalid age.");
+            throw new IllegalArgumentException("Age must be 13 or older");
         }
     }
 
@@ -41,7 +41,7 @@ public class UserProfile {
         if (gender != null && (gender.equalsIgnoreCase("male") || gender.equalsIgnoreCase("female"))) {
             this.gender = gender.toLowerCase();
         } else {
-            throw new IllegalArgumentException("Invalid gender.");
+            throw new IllegalArgumentException("Gender must be male or female");
         }
     }
 
@@ -53,7 +53,7 @@ public class UserProfile {
         if (weight >= 30 && weight <= 200) {
             this.weight = weight;
         } else {
-            throw new IllegalArgumentException("Invalid weight.");
+            throw new IllegalArgumentException("Weight must be between 30kg and 200kg");
         }
     }
 
@@ -65,7 +65,7 @@ public class UserProfile {
         if (height >= 120 && height <= 250) {
             this.height = height;
         } else {
-            throw new IllegalArgumentException("Invalid height.");
+            throw new IllegalArgumentException("Height must be between 120cm and 250cm");
         }
     }
 }
