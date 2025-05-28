@@ -76,7 +76,7 @@ public class SceneController {
         }
     }
 
-    // BMI Calculation and Display
+    // BMICalculator Calculation and Display
     public double bmi2;
 //    public void switchToScene4(ActionEvent event) throws IOException {
 //        try {
@@ -96,7 +96,7 @@ public class SceneController {
 //            calc.bmical(weight, height);
 //            double bmi = calc.index();
 //
-//            FXMLLoader loader = new FXMLLoader(getClass().getResource("/frontend/BMI.fxml"));
+//            FXMLLoader loader = new FXMLLoader(getClass().getResource("/frontend/BMICalculator.fxml"));
 //            Parent bmiRoot = loader.load();
 //
 //            Label bmiLabel = (Label) bmiRoot.lookup("#bmiLabel");
@@ -284,7 +284,7 @@ public class SceneController {
         String goalAdvice = "";
 
         if (bmi2 == 0.0) {
-            goalAdvice = "BMI not calculated yet.";
+            goalAdvice = "BMICalculator not calculated yet.";
         } else {
             goalAdvice = calorieCalculator.suggestPlanBasedOnBMIAndGoal(bmi2);
             tips.setText(goalAdvice);

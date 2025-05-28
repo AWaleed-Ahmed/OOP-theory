@@ -1,6 +1,6 @@
 package backend.models;
 
-public class BMI {
+public class BMICalculator {
     private double bmi;
 
     public double calculateBMI(UserProfile profile) {

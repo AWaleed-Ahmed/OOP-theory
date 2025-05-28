@@ -1,10 +1,10 @@
 package backend.services;
 
-import backend.models.BMI;
+import backend.models.BMICalculator;
 import backend.models.UserProfile;
 
 public class BMIService {
-    private final BMI bmiCalculator = new BMI();
+    private final BMICalculator bmiCalculator = new BMICalculator();
 
     public double getBMI(UserProfile profile) {
         return bmiCalculator.calculateBMI(profile);

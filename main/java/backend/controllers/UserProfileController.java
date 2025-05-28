@@ -41,7 +41,7 @@ public class UserProfileController {
             double bmi = service.calculateBMI(profile);
             String advice = service.getHealthAdvice(bmi);
 
-            System.out.printf("BMI: %.2f\nAdvice: %s%n", bmi, advice);
+            System.out.printf("BMICalculator: %.2f\nAdvice: %s%n", bmi, advice);
             // Replace with actual scene switch and display result
 
             // this error needs to be resolved ***************** yahan error lable aaye ga
