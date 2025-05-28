@@ -6,6 +6,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.util.Objects;
+
 public class Main extends Application {
 
     private static Stage primaryStage;
@@ -15,7 +17,7 @@ public class Main extends Application {
         try {
             Main.primaryStage = primaryStage;
             // Load initial Login View
-            Parent root = FXMLLoader.load(getClass().getResource("views/LoginView.fxml"));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/frontend/LogInView.fxml")));
             primaryStage.setTitle("Fitness App");
             primaryStage.setScene(new Scene(root));
             primaryStage.show();
