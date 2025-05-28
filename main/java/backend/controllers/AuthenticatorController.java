@@ -26,7 +26,7 @@ public class AuthenticatorController {
 
         if (authenticator.login(username, password)) {
             loginMessage.setText("Login successful!");
-            switchScene("/frontend/CalorieCalculator.fxml");
+            switchScene("/frontend/UserProfileView.fxml");
         } else {
             loginMessage.setText("Invalid credentials.");
         }
